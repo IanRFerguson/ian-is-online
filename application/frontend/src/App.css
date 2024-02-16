@@ -20,4 +20,50 @@
 /* SHARED RESOURCES */
 .sectionDisplay {
   height: 100vh;
+  margin: 2%;
+  padding: 2%;
 }
+
+/* META */
+
+/* LANDING PAGE */
+.landingDisplayContainer {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.displayContainerLeft {
+  width: 50%;
+  float: left;
+}
+
+.ian-landed {
+  width: 75%;
+  border-radius: 50%;
+}
+
+.landingSocialContact {
+  font-size: x-small;
+  display: inline-block;
+  padding: 1vw;
+}
+
+.displayContainerRight {
+  margin-left: 50%;
+  padding-top: 10%;
+}
+
+.summaryList {
+  list-style-type: none;
+}
+
+.summaryListItem {
+  text-decoration: none;
+  text-align: left;
+  font-size: 155%;
+  padding: 1vh 0;
+}
+
+/* ENGINEERING */
+
+/* CONTACT ME */

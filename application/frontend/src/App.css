@@ -28,8 +28,9 @@
 
 /* LANDING PAGE */
 .landingDisplayContainer {
-  width: 65%;
+  width: 72%;
   margin: 0 auto;
+  padding-top: 5%;
 }
 
 .displayContainerLeft {
@@ -42,6 +43,10 @@
   border-radius: 50%;
 }
 
+.howdy {
+  font-size: 215%;
+}
+
 .landingSocialContact {
   font-size: x-small;
   display: inline-block;
@@ -50,7 +55,7 @@
 
 .displayContainerRight {
   margin-left: 50%;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .summaryList {
@@ -65,5 +70,12 @@
 }
 
 /* ENGINEERING */
+.engineeringContent {
+  width: 100%;
+}
+
+.engineeringBlock {
+  padding: 1%
+}
 
 /* CONTACT ME */

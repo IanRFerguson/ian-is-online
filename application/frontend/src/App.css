@@ -78,4 +78,16 @@
   padding: 1%
 }
 
+.engineeringCarouselItem {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 3%;
+}
+
+.engineeringCarouselImage {
+  margin: 0 auto;
+  width: 70%;
+  height: 30%;
+}
+
 /* CONTACT ME */

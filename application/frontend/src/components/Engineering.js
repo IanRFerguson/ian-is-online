@@ -5,8 +5,8 @@ import nba_dbt from "../media/nba_dbt.png"
 import klondike_sf from "../media/klondike_sf.jpeg"
 import nba_ppg from "../media/nba_ppg.png"
 import glmx from "../media/glmx.png"
+import california from "../media/census.png"
 
-///
 
 const Portfolio = (props) => {
     const responsive = {
@@ -35,10 +35,10 @@ const Portfolio = (props) => {
         ssr={true} // means to render carousel on server-side.
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={20000}
+        autoPlaySpeed={10000}
         keyBoardControl={true}
         customTransition="all .5"
-        transitionDuration={5000}
+        transitionDuration={1000}
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
@@ -101,6 +101,16 @@ const Portfolio = (props) => {
             </p>
             <img src={nba_ppg} className="engineeringCarouselImage"></img>
         </div>
+        <div className="engineeringCarouselItem">
+            <h3>US Census API</h3>
+            <p>
+                <a href="https://github.com/IanRFerguson/us-census-api" target="_blank">
+                    View it on Github
+                </a>
+            </p>
+            <p></p>
+            <img src={california} className="engineeringCarouselImage"></img>
+        </div>
     </Carousel>;
 
     return carousel_display
@@ -112,7 +122,9 @@ const Engineering = (props) => {
             <div className="sectionHeader">
                 <h1>Engineering Portfolio</h1>
             </div>
-            <Portfolio />
+            <div class="engineeringContent">
+                <Portfolio />
+            </div>
         </div>
     )
 }

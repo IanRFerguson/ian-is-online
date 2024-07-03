@@ -1,4 +1,7 @@
 import ian from "../media/ian.jpg";
+import github from "../media/social/github.png"
+import linkedin from "../media/social/linkedin.png"
+import instagram from "../media/social/instagram.png"
 
 const SummaryBox = (props) => {
     return (
@@ -20,10 +23,16 @@ const Socials = (props) => {
         <div className="displayContainerLeft">
             <div><img src={ian} className="ian-landed"></img></div>
             {/* TODO - These should be icons instead of plain text */}
-            <div>
-                <p className="landingSocialContact">GitHub</p>
-                <p className="landingSocialContact">LinkedIn</p>
-                <p className="landingSocialContact">Instagram</p>
+            <div className="socialMediaLinks">
+                <a href="https://github.com/IanRFerguson" target="_blank">
+                    <img src={github}></img>
+                </a>
+                <a href="https://www.linkedin.com/in/ianrferguson/" target="_blank">
+                    <img src={linkedin}></img>
+                </a>
+                <a href="https://www.instagram.com/human_cactus/" target="_blank">
+                    <img src={instagram}></img>
+                </a>
             </div>
         </div>
     )

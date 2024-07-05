@@ -108,7 +108,10 @@ const Portfolio = (props) => {
                     View it on Github
                 </a>
             </p>
-            <p></p>
+            <p>
+                This is a full-stack Flask app that hits the US Census API and returns
+                a Folium choropleth map of a given state's population statistics.
+            </p>
             <img src={california} className="engineeringCarouselImage"></img>
         </div>
     </Carousel>;

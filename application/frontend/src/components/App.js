@@ -1,18 +1,19 @@
 import '../App.css';
+import '../App-mobile.css'
 import Landing from './Landing.js';
-import About from './About.js';
 import Engineering from './Engineering.js';
 import Contact from './Contact.js';
+import Footer from './Footer';
 
-function App() {
+function MySite() {
   return (
     <div className="App">
       <Landing />
-      {/* <About /> */}
       <Engineering />
       <Contact />
+      <Footer />
     </div>
   );
 }
 
-export default App;
+export default MySite;

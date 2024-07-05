@@ -1,0 +1,61 @@
+/* Mobile Devices */
+@media (max-width: 600px) {
+    /* SHARED RESOURCES */
+    .sectionDisplay {
+        height: 100vh;
+        margin: 3%;
+        padding: 3%;
+    }
+
+    /* LANDING PAGE */
+    .landingDisplayContainer {
+        width: 100%;
+        padding-top: 8%;
+    }
+
+    .displayContainerLeft {
+        width: auto;
+    }
+
+    .displayContainerRight {
+        display: inline-block;
+        margin-left: auto;
+        padding-top: 0;
+    }
+
+    .ian-landed {
+        border-radius: 25%;
+    }
+
+    /* ENGINEERING */
+    .engineeringCarouselItem {
+        width: 75%
+    }
+
+    .engineeringCarouselItem p {
+        padding: 2.5%;
+    }
+
+    /* CONTACT */
+    .contactMeComponent {
+        padding: 3%;
+    }
+
+    .contactMeComponent textarea {
+        width: 80%;
+    }
+
+    .contactMeInputField {
+        width: 80%;
+    }
+
+    .writeToIan {
+        width: 45%;
+        padding: 3%;
+    }
+
+    /* FOOTER */
+    .footerComponent {
+        padding-bottom: 5%;
+    }
+}

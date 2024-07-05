@@ -24,8 +24,6 @@
   padding: 2%;
 }
 
-/* META */
-
 /* LANDING PAGE */
 .landingDisplayContainer {
   width: 72%;
@@ -110,6 +108,8 @@
 /* CONTACT ME */
 .contactMeContent {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .contactMeComponent {
@@ -155,5 +155,16 @@
   cursor: pointer;
   margin: 10px 5px;
   padding: 1%;
+  font-size: 100%;
+}
+
+/* FOOTER */
+.footerComponent {
+  margin: 0 auto;
+  padding: 1%;
+}
+
+.footerComponent h4 {
+  font-weight: normal;
   font-size: 100%;
 }

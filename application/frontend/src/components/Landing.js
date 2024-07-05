@@ -1,9 +1,12 @@
 import ian from "../media/ian.jpg";
+import github from "../media/social/github.png"
+import linkedin from "../media/social/linkedin.png"
+import instagram from "../media/social/instagram.png"
 
 const SummaryBox = (props) => {
     return (
         <div className="displayContainerRight">
-            <h2>Howdy! I'm Ian</h2>
+            <h2 className="howdy">Howdy! I'm Ian</h2>
             <ul className="summaryList">
                 <li className="summaryListItem">🗽 I'm a developer based in Brooklyn, New York</li>
                 <li className="summaryListItem">🗳️ I develop data pipelines, tools, and applications to help progressive
@@ -19,10 +22,17 @@ const Socials = (props) => {
     return (
         <div className="displayContainerLeft">
             <div><img src={ian} className="ian-landed"></img></div>
-            <div>
-                <p className="landingSocialContact">GitHub</p>
-                <p className="landingSocialContact">LinkedIn</p>
-                <p className="landingSocialContact">Instagram</p>
+            {/* TODO - These should be icons instead of plain text */}
+            <div className="socialMediaLinks">
+                <a href="https://github.com/IanRFerguson" target="_blank">
+                    <img src={github}></img>
+                </a>
+                <a href="https://www.linkedin.com/in/ianrferguson/" target="_blank">
+                    <img src={linkedin}></img>
+                </a>
+                <a href="https://www.instagram.com/human_cactus/" target="_blank">
+                    <img src={instagram}></img>
+                </a>
             </div>
         </div>
     )

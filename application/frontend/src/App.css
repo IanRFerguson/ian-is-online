@@ -24,12 +24,11 @@
   padding: 2%;
 }
 
-/* META */
-
 /* LANDING PAGE */
 .landingDisplayContainer {
-  width: 65%;
+  width: 72%;
   margin: 0 auto;
+  padding-top: 5%;
 }
 
 .displayContainerLeft {
@@ -42,6 +41,10 @@
   border-radius: 50%;
 }
 
+.howdy {
+  font-size: 215%;
+}
+
 .landingSocialContact {
   font-size: x-small;
   display: inline-block;
@@ -50,7 +53,7 @@
 
 .displayContainerRight {
   margin-left: 50%;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .summaryList {
@@ -64,6 +67,104 @@
   padding: 1vh 0;
 }
 
+.socialMediaLinks {
+  position: relative;
+}
+
+.socialMediaLinks img {
+  width: 7.5%;
+  padding: 3%;
+}
+
 /* ENGINEERING */
+.engineeringContent {
+  width: 100%;
+}
+
+.engineeringBlock {
+  padding: 1%
+}
+
+.engineeringCarouselItem {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 3%;
+}
+
+.engineeringCarouselItem p {
+  font-size: 135%;
+}
+
+.engineeringCarouselItem h3 {
+  font-size: 135%;
+}
+
+.engineeringCarouselImage {
+  margin: 0 auto;
+  width: 70%;
+  height: 30%;
+}
 
 /* CONTACT ME */
+.contactMeContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactMeComponent {
+  padding: 1%;
+}
+
+.contactMeInputField {
+  width: 50%;
+  padding: 1%;
+  font-size: 100%;
+  border: 1px solid #ccc;
+}
+
+.contactMeComponent textarea {
+  width: 50%;
+  padding: 1.5%;
+  font-size: 120%;
+  border: 1px solid #ccc;
+}
+
+.contactMeInputField {
+  width: 50%;
+  padding: 1.5%;
+  font-size: 120%;
+}
+
+.contactMeTextField {
+  width: 50%;
+  padding: 1%;
+}
+
+.contactMeContent p {
+  font-size: 120%;
+}
+
+.writeToIan {
+  width: 25%;
+  background: #B83A4B;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 10px 5px;
+  padding: 1%;
+  font-size: 100%;
+}
+
+/* FOOTER */
+.footerComponent {
+  margin: 0 auto;
+  padding: 1%;
+}
+
+.footerComponent h4 {
+  font-weight: normal;
+  font-size: 100%;
+}

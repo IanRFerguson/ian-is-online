@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import getEmailConfig from '../getEmailConfig';
 
 const ContactForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [stateMessage, setStateMessage] = useState(null);
+
+    const emailConfig = getEmailConfig();
 
     const sendEmail = (e) => {
         e.persist();
@@ -12,10 +15,10 @@ const ContactForm = () => {
 
         emailjs
             .sendForm(
-                'service_ani0jod',
-                'template_2ueaqwq',
+                emailConfig.service_id,
+                emailConfig.template_id,
                 e.target, {
-                publicKey: 'jEHRP8wQ0aO-p5wa6',
+                publicKey: emailConfig.public_key,
             })
             .then(
                 (result) => {

@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import getEmailConfig from '../getEmailConfig';
+import CONFIG from '../emailConfig';
+import swal from 'sweetalert';
+
+
 
 const ContactForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [stateMessage, setStateMessage] = useState(null);
-
-    const emailConfig = getEmailConfig();
 
     const sendEmail = (e) => {
         e.persist();
@@ -15,26 +15,20 @@ const ContactForm = () => {
 
         emailjs
             .sendForm(
-                emailConfig.service_id,
-                emailConfig.template_id,
+                CONFIG.serviceID,
+                CONFIG.templateID,
                 e.target, {
-                publicKey: emailConfig.public_key,
+                publicKey: CONFIG.publicKey,
             })
             .then(
                 (result) => {
-                    setStateMessage('Message sent!');
+                    swal("Thanks for reaching out! I'll get back to you soon 🫡");
                     setIsSubmitting(false);
-                    setTimeout(() => {
-                        setStateMessage(null);
-                    }, 5000); // hide message after 5 seconds
                 },
                 (error) => {
                     console.log(error)
-                    setStateMessage('Something went wrong, please try again later');
+                    swal("Sorry, something went wrong");
                     setIsSubmitting(false);
-                    setTimeout(() => {
-                        setStateMessage(null);
-                    }, 5000); // hide message after 5 seconds
                 }
             );
 
@@ -54,7 +48,6 @@ const ContactForm = () => {
             </div>
             <div className='contactMeComponent'>
                 <input type="submit" value="Send" disabled={isSubmitting} className='writeToIan' />
-                {stateMessage && <p>{stateMessage}</p>}
             </div>
         </form>
     );

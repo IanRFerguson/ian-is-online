@@ -121,11 +121,11 @@ const Portfolio = (props) => {
 
 const Engineering = (props) => {
     return (
-        <div className="sectionDisplay">
+        <div className="sectionDisplay sectionDisplayFill">
             <div className="sectionHeader">
                 <h1>Engineering Portfolio</h1>
             </div>
-            <div class="engineeringContent">
+            <div className="engineeringContent">
                 <Portfolio />
             </div>
         </div>

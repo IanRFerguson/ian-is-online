@@ -1,1 +1,6 @@
 prod.env
+.vscode
+*.pyc*
+
+# TODO - Figure out a better workaround long term
+emailConfig.js

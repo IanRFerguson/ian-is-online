@@ -5,7 +5,7 @@ import Engineering from './Engineering.js';
 import Contact from './Contact.js';
 import Footer from './Footer';
 
-function MySite() {
+function IanIsOnline() {
   return (
     <div className="App">
       <Landing />
@@ -16,4 +16,4 @@ function MySite() {
   );
 }
 
-export default MySite;
+export default IanIsOnline;

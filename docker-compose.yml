@@ -6,6 +6,4 @@ services:
     volumes:
       - .:/app/
     ports:
-      - 5000:5000
-    env_file:
-      - prod.env
+      - 80:80

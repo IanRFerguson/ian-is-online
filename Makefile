@@ -7,9 +7,16 @@ build-container:
 	@docker compose up --build -d
 
 build-app:
+	@docker compose down
 	@make build-react
 	@make build-container
 
-build-app-clean:
-	@docker compose down
-	@make build-app
+ssh:
+	@gcloud compute ssh --project=${GCP_PROJECT} --zone=${GCP_ZONE} ${GCP_VM_NAME}
+
+scp:
+	@bash deploy/copy_files_to_vm.sh
+
+clean-vm:
+	@bash deploy/install_docker_on_vm.sh
+	@sudo apt-get install npm

@@ -4,6 +4,9 @@ WORKDIR /app
 COPY . .
 RUN pip install -r requirements.txt
 
+WORKDIR /app/application/frontend
+RUN npm run build
+
 WORKDIR /app/application/backend
 EXPOSE 80
 CMD ["gunicorn", "-b", ":80", "wsgi"]

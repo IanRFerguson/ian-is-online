@@ -4,6 +4,7 @@ build-react:
 
 build-container:
 	@echo "Containerizing the application..."
+	@docker compose down
 	@docker compose up --build -d
 
 build-app:

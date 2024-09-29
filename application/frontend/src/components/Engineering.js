@@ -1,11 +1,11 @@
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css";
 
-import nba_dbt from "../media/nba_dbt.png"
-import klondike_sf from "../media/klondike_sf.jpeg"
-import nba_ppg from "../media/nba_ppg.png"
-import glmx from "../media/glmx.png"
-import california from "../media/census.png"
+import nba_dbt from "../media/projects/nba_dbt_2.png"
+import klondike_sf from "../media/projects/klondike_sf.jpeg"
+import nba_ppg from "../media/projects/nba_ppg.png"
+import glmx from "../media/projects/glmx.png"
+import california from "../media/projects/census.png"
 
 
 const Portfolio = (props) => {

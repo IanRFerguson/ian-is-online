@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.28b8fdb3.css",
-    "main.js": "/static/js/main.049162f4.js",
+    "main.js": "/static/js/main.837a0965.js",
     "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
     "static/media/census.png": "/static/media/census.21007cd9c68099a96e4c.png",
     "static/media/ian.jpg": "/static/media/ian.18197e7b20ccccd3167d.jpg",
-    "static/media/nba_dbt.png": "/static/media/nba_dbt.4bb880ed9fcccb23928a.png",
+    "static/media/nba_dbt_2.png": "/static/media/nba_dbt_2.4ff2257dac5a0708b538.png",
     "static/media/nba_ppg.png": "/static/media/nba_ppg.eaa954e956226d0b147d.png",
     "static/media/glmx.png": "/static/media/glmx.54696b447233300667a0.png",
     "static/media/klondike_sf.jpeg": "/static/media/klondike_sf.bc893b9b0e7d9e996b6b.jpeg",
@@ -17,11 +17,11 @@
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
     "main.28b8fdb3.css.map": "/static/css/main.28b8fdb3.css.map",
-    "main.049162f4.js.map": "/static/js/main.049162f4.js.map",
+    "main.837a0965.js.map": "/static/js/main.837a0965.js.map",
     "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28b8fdb3.css",
-    "static/js/main.049162f4.js"
+    "static/js/main.837a0965.js"
   ]
 }

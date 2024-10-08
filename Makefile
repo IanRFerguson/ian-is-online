@@ -12,12 +12,9 @@ build-app:
 	@make build-react
 	@make build-container
 
-ssh:
-	@gcloud compute ssh --project=${GCP_PROJECT} --zone=${GCP_ZONE} ${GCP_VM_NAME}
-
-scp:
-	@bash deploy/copy_files_to_vm.sh
-
-clean-vm:
-	@bash deploy/install_docker_on_vm.sh
-	@sudo apt-get install npm
+push:
+	@echo "Checking for unstaged changes..."
+	@bash deploy/branch_changes.sh
+	@make build-react
+	@echo "Pushing to GitHub..."
+	@git add . && git commit -m "compile react" && git push

@@ -1,6 +1,6 @@
 build-react:
 	@echo "Building the React frontend..."
-	@cd application/frontend && npm run build
+	@cd application/frontend-chakra && npm run build
 
 build-container:
 	@echo "Containerizing the application..."

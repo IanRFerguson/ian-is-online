@@ -22,7 +22,7 @@
   .sectionDisplay {
     height: 75vh;
     margin: 3%;
-    padding: 3%;
+    padding: 1%;
   }
 
   .sectionDisplayFill {
@@ -78,6 +78,26 @@
   .socialMediaLinks img {
     width: 7.5%;
     padding: 3%;
+  }
+
+  /* ABOUT */
+  .aboutContent {
+    width: 100%;
+    margin: 0 auto;
+    font-size: larger;
+  }
+
+  .aboutParagraph {
+    padding: 1% 0;
+  }
+
+  .aboutParagraph ul {
+    list-style: none;
+  }
+
+  .aboutParagraph a {
+    color: black;
+    text-decoration: none;
   }
 
   /* ENGINEERING */

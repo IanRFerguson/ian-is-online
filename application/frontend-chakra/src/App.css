@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,16 +15,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /* Contact form */
@@ -54,25 +33,23 @@
 }
 
 .contactMeInputField {
-  width: 50%;
+  width: 85%;
   padding: 0.5%;
   font-size: 100%;
   border: 1px solid #ccc;
 }
 
 .contactMeComponent textarea {
-  width: 50%;
+  width: 85%;
   padding: 1.5%;
-  font-size: 130%;
   border: 1px solid #ccc;
   height: 10em;
   font-family: inherit;
 }
 
 .contactMeInputField {
-  width: 50%;
+  width: 85%;
   padding: 1.5%;
-  font-size: 120%;
 }
 
 .contactMeTextField {
@@ -95,4 +72,10 @@
   margin: 10px 5px;
   padding: 1%;
   font-size: 100%;
+  transition-property: var(--chakra-transition-property-common);
+  transition-duration: var(--chakra-transition-duration-normal);
+}
+
+.writeToIan:hover {
+  background: var(--chakra-colors-blue-500)
 }

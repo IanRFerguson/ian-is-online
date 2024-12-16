@@ -32,7 +32,67 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Contact form */
+.contactMeForm {
+  width: 100%;
+}
+
+.contactMeContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactMeComponent {
+  padding: 1%;
+}
+
+.contactMeInputField {
+  width: 50%;
+  padding: 0.5%;
+  font-size: 100%;
+  border: 1px solid #ccc;
+}
+
+.contactMeComponent textarea {
+  width: 50%;
+  padding: 1.5%;
+  font-size: 130%;
+  border: 1px solid #ccc;
+  height: 10em;
+  font-family: inherit;
+}
+
+.contactMeInputField {
+  width: 50%;
+  padding: 1.5%;
+  font-size: 120%;
+}
+
+.contactMeTextField {
+  width: 50%;
+  padding: 1%;
+}
+
+.contactMeContent p {
+  font-size: 120%;
+}
+
+.writeToIan {
+  width: 25%;
+  background: var(--chakra-colors-blue-400);
+  font-weight: bold;
+  color: var(--chakra-colors-gray-800);
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 10px 5px;
+  padding: 1%;
+  font-size: 100%;
 }

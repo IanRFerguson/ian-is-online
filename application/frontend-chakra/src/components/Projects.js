@@ -23,16 +23,16 @@ import OtherProjectsArray from "./OtherProjectsArray";
 import TagsArray from "./TagsArray";
 
 export default function Projects({ color }) {
-    const projects = ProjectsArray();
-    const others = OtherProjectsArray();
-    const options = TagsArray("ProjectsTags");
-    
-    const [selected, setSelected] = useState("All");
+  const projects = ProjectsArray();
+  const others = OtherProjectsArray();
+  const options = TagsArray("ProjectsTags");
 
-    const handleSelected = (value) => {
-      setSelected(value);
-    };
-    
+  const [selected, setSelected] = useState("All");
+
+  const handleSelected = (value) => {
+    setSelected(value);
+  };
+
   return (
     <>
       <Container maxW={"3xl"} id="projects">
@@ -97,7 +97,9 @@ export default function Projects({ color }) {
           <Text color={"gray.600"} fontSize={"xl"} px={4}>
             Other Projects
           </Text>
-          <Center px={4}>
+
+          {/* Preserving legacy code */}
+          {/* <Center px={4}>
             <ButtonGroup variant="outline">
               <Button
                 colorScheme={selected === "All" ? `${color}` : "gray"}
@@ -114,7 +116,8 @@ export default function Projects({ color }) {
                 </Button>
               ))}
             </ButtonGroup>
-          </Center>
+          </Center> */}
+
           <SimpleGrid columns={[1, 2, 3]} px={4} spacing={4}>
             {others
               .filter((other) => {

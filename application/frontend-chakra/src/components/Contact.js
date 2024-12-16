@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import ProfileArray from "./ProfileArray";
+import ContactForm from "./ContactForm";
 
 export default function Contact({ color }) {
   const profile = ProfileArray();
@@ -41,13 +42,19 @@ export default function Contact({ color }) {
             <Divider orientation="horizontal" />
           </Stack>
           <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-            <Heading fontSize={"3xl"}>Let's stay in touch!</Heading>
+            <Heading fontSize={"3xl"}>Let's chat!</Heading>
             <Text color={"gray.600"} fontSize={"xl"} px={4}>
-              {profile.contact}
+              If you'd like to discuss engineering your next project or New York Knicks basketball, feel free to drop me a note in the form below
             </Text>
-            <Text color={`${color}.500`} fontWeight={600} fontSize={"lg"} px={4}>
+
+            {/* Preserving legacy code */}
+            {/* <Text color={`${color}.500`} fontWeight={600} fontSize={"lg"} px={4}>
               {profile.email}
-            </Text>
+            </Text> */}
+
+            <Center>
+              <ContactForm />
+            </Center>
             <Center>
               <HStack pt={4} spacing={4}>
                 <FaLinkedin onClick={linkedin} size={28} />

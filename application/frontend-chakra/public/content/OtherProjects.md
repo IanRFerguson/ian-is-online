@@ -1,23 +1,21 @@
-## Project 1
-Description
+## Klondike
+Suite of analytical warehouse connectors (BigQuery, Snowflake, Redshift) powered by Polars DataFrames
 - Tags: Category 1
 - Badges:
-  - Badge [blue]
 - Buttons:
-  - Link [https://example.com]
+  - Source Code [https://github.com/IanRFerguson/klondike]
+  - Package Metadata [https://pypi.org/project/klondike/]
 
-## Project 2
-Description
+## tmc-go
+Command line tools for The Movement Cooperative, written in GO
 - Tags: Category 2
 - Badges:
-  - Badge [blue]
 - Buttons:
-  - Link [https://example.com]
+  - Source Code [https://github.com/IanRFerguson/tmc-go]
 
-## Project 3
-Description
+## NBA Points Per Game
+Full-stack Flask / React / D3 application built to display points scored over time by a selected NBA team
 - Tags: Category 3
 - Badges:
-  - Badge [blue]
 - Buttons:
-  - Link [https://example.com]
+  - Source Code [https://github.com/IanRFerguson/nba-ppg]

@@ -19,7 +19,8 @@ export default function Footer() {
         align="center"
       >
         <Text>Made with ❤️ in San Francisco</Text>
+        <Text> <a href="https://github.com/eldoraboo/portable-portfolio" target="_blank">View React Template</a></Text>
       </Container>
-    </Box>
+    </Box >
   );
 }

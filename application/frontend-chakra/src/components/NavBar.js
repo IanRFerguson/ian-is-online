@@ -22,23 +22,24 @@ const TbIcons = require("react-icons/tb");
 export default function Nav({ color }) {
   const profile = ProfileArray();
   const colors = {
-  "blue": "#3182CE", 
-  "cyan": "#00B5D8", 
-  "gray": "#718096", 
-  "green": "#38A169", 
-  "orange": "#DD6B20", 
-  "pink": "#D53F8C", 
-  "purple": "#805AD5", 
-  "red": "#E53E3E", 
-  "teal": "#319795", 
-  "yellow": "#D69E2E"};
+    "blue": "#3182CE",
+    "cyan": "#00B5D8",
+    "gray": "#718096",
+    "green": "#38A169",
+    "orange": "#DD6B20",
+    "pink": "#D53F8C",
+    "purple": "#805AD5",
+    "red": "#E53E3E",
+    "teal": "#319795",
+    "yellow": "#D69E2E"
+  };
   const [scroll, setScroll] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [isLargerThanMD] = useMediaQuery("(min-width: 48em)");
   const scrollToHero = () => {
-  const heroSection = document.querySelector("#hero");
+    const heroSection = document.querySelector("#hero");
     heroSection.scrollIntoView({ behavior: "smooth" });
   };
   const scrollToAbout = () => {
@@ -114,9 +115,11 @@ export default function Nav({ color }) {
             ) : (
               <></>
             )}
-            <Button onClick={toggleColorMode}>
+
+            {/* Preserving legacy code */}
+            {/* <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            </Button>
+            </Button> */}
 
             {isLargerThanMD ? (
               <></>

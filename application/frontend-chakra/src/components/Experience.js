@@ -35,7 +35,7 @@ export default function Experience({ color }) {
       setSelected(options[0].value);
     }
   }, [options]);
-  
+
   const handleSelected = (value) => {
     setSelected(value);
   };
@@ -58,7 +58,9 @@ export default function Experience({ color }) {
             </HStack>
             <Divider orientation="horizontal" />
           </Stack>
-          <Center px={4}>
+
+          {/* Preserving legacy code */}
+          {/* <Center px={4}>
             <ButtonGroup variant="outline">
               {options.map((option) => (
                 <Button
@@ -69,7 +71,8 @@ export default function Experience({ color }) {
                 </Button>
               ))}
             </ButtonGroup>
-          </Center>
+          </Center> */}
+
           <Stack px={4} spacing={4}>
             {experience
               .filter((exp) => exp.tags.includes(selected))

@@ -7,7 +7,7 @@
 - Short Description Here.
 
 ## About
-🗽 I'm a developer based in Brooklyn, New York 🗳️ I develop data pipelines, tools, and applications to help progressive political organizations build power 🧠 I'm a former academic and love learning about novel ways to model the social brain!
+I develop data pipelines, tools, and applications to help progressive political organizations build power. My team at The Movement Cooperative is tasked with building scalable cloud infrastructure to provide the progressive left with reliable data systems.
 
 ## Contact
 Write your contact info here
@@ -16,4 +16,4 @@ Write your contact info here
 - Email: IANFERGUSONRVA@gmail.com
 
 ## Logo
-- IRF
+- 

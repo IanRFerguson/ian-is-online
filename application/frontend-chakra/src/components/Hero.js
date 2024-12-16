@@ -19,10 +19,10 @@ export default function Header({ color }) {
   };
   const linkedin = () => {
     window.open(
-                `${profile.linkedin}`,
-                "_blank",
-                "noreferrer,noopener"
-              );
+      `${profile.linkedin}`,
+      "_blank",
+      "noreferrer,noopener"
+    );
   };
   return (
     <>
@@ -51,12 +51,15 @@ export default function Header({ color }) {
               {profile.headerRole}
             </Text>
           </Heading>
+
+          {/* Preserving legacy code */}
           {/* <Text
             color={"gray.500"}
             fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
           >
             {profile.headerDesc}
           </Text> */}
+
           <Stack
             direction={"column"}
             spacing={3}
@@ -76,34 +79,6 @@ export default function Header({ color }) {
             >
               Connect With Me
             </Button>
-            {/* <Button
-              variant={"link"}
-              colorScheme={"blue"}
-              size={"sm"}
-              onClick={scrollToContact}
-            >
-              Contact Me
-            </Button> */}
-            {/* <Box>
-              <Icon
-                as={Arrow}
-                color={useColorModeValue("gray.800", "gray.300")}
-                w={71}
-                position={"absolute"}
-                right={-71}
-                top={"10px"}
-              />
-              <Text
-                fontSize={"lg"}
-                fontFamily={"Caveat"}
-                position={"absolute"}
-                right={"-85px"}
-                top={"-15px"}
-                transform={"rotate(10deg)"}
-              >
-                Click me!
-              </Text>
-            </Box> */}
           </Stack>
         </Stack>
       </Container>

@@ -14,6 +14,7 @@ Write your contact info here
 - LinkedIn: https://www.linkedin.com/in/ianrferguson/
 - GitHub: https://github.com/IanRFerguson
 - Email: IANFERGUSONRVA@gmail.com
+- Instagram: https://www.instagram.com/human_cactus/
 
 ## Logo
 - 

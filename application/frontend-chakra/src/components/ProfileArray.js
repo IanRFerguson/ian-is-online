@@ -12,6 +12,7 @@ const parseProfile = (mdContent) => {
     github: "",
     email: "",
     logo: "",
+    instagram: ""
   };
 
   const lines = mdContent.split("\n");
@@ -33,7 +34,7 @@ const parseProfile = (mdContent) => {
           break;
         case "Contact":
           profile.contact = lines[++i].trim();
-          const contactLinks = ["LinkedIn", "GitHub", "Email"];
+          const contactLinks = ["LinkedIn", "GitHub", "Email", "Instagram"];
           for (const link of contactLinks) {
             const linkLine = lines[++i].substr(2).trim();
             if (linkLine.startsWith(link)) {

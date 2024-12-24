@@ -22,8 +22,10 @@ app:
 # Pushes to the remote branch
 # NOTE - This only works on a clean branch with no unstaged changes
 push:
-	@echo "Checking for unstaged changes..."
-	@bash deploy/branch_changes.sh
+	@if [ ! -z $(force) ]; then						\
+		echo "Checking for unstaged changes...";	\
+		bash deploy/branch_changes.sh;				\
+	fi
 	@make react
 	@echo "Pushing to GitHub..."
 	@git add . && git commit -m "compiled react frontend" && git push

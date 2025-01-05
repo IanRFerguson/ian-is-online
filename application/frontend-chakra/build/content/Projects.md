@@ -15,6 +15,14 @@ Using Prefect as an orchestration tool, this project extracts data from the NBA 
 - Buttons:
   - Source Code [https://github.com/IanRFerguson/player-analytics]
 
+## Whiskey ML
+This is an end-to-end Machine Learning pipeline designed to predict my ratings of different whiskeys from around the world. The ML models are integrated with dbt so that all the transformations and predictions occur seamlessly in one project.
+- ![whiskey-ml](../assets/projects/whiskey-ml.png)
+- Tags: Category 1
+- Badges:
+- Buttons:
+  - Source Code [https://github.com/IanRFerguson/whiskey-ml]
+
 ## GLM Express
 GLM Express offers a standardized, templated way to model first- and second-level functional neuroimaging data. It is designed to slot into any valid BIDS project, and allows the user to customize their analysis in one centralized place.
 - ![glmx](../assets/projects/glmx.png)

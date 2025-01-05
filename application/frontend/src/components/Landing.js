@@ -9,7 +9,7 @@ const SummaryBox = (props) => {
             <h2 className="howdy">Howdy! I'm Ian</h2>
             <ul className="summaryList">
                 <li className="summaryListItem">🗽 I'm a developer based in Brooklyn, New York</li>
-                <li className="summaryListItem">🗳️ I develop data pipelines, tools, and applications to help progressive
+                <li className="summaryListItem">🗳️ I engineer data pipelines, tools, and applications to help progressive
                     political organizations build power</li>
                 <li className="summaryListItem">🧠 I'm a former academic and love learning about novel ways to model the
                     social brain!</li>
@@ -22,7 +22,6 @@ const Socials = (props) => {
     return (
         <div className="displayContainerLeft">
             <div><img src={ian} className="ian-landed"></img></div>
-            {/* TODO - These should be icons instead of plain text */}
             <div className="socialMediaLinks">
                 <a href="https://github.com/IanRFerguson" target="_blank">
                     <img src={github}></img>

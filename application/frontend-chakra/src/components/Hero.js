@@ -77,7 +77,7 @@ export default function Header({ color }) {
               }}
               onClick={scrollToContact}
             >
-              Connect With Me
+              Let's Connect!
             </Button>
           </Stack>
         </Stack>

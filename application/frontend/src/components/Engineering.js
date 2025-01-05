@@ -87,7 +87,7 @@ const Portfolio = (props) => {
             </p>
             <img src={glmx} className="engineeringCarouselImage"></img>
         </div>
-        <div className="engineeringCarouselItem">
+        {/* <div className="engineeringCarouselItem">
             <h3>NBA PPG Full-Stack Application</h3>
             <p>
                 <a href="https://github.com/IanRFerguson/nba-ppg" target="_blank">
@@ -100,7 +100,7 @@ const Portfolio = (props) => {
                 it to the end user in the form a D3.js interactive chart.
             </p>
             <img src={nba_ppg} className="engineeringCarouselImage"></img>
-        </div>
+        </div> */}
         <div className="engineeringCarouselItem">
             <h3>US Census API</h3>
             <p>

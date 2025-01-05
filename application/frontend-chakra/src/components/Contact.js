@@ -45,7 +45,7 @@ export default function Contact({ color }) {
             <Divider orientation="horizontal" />
           </Stack>
           <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-            <Heading fontSize={"3xl"}>Let's chat!</Heading>
+            <Heading fontSize={"3xl"}>Let's connect!</Heading>
             <Text color={"gray.600"} fontSize={"xl"} px={4}>
               If you'd like to discuss engineering your next project or New York Knicks basketball, feel free to drop me a note in the form below:
             </Text>

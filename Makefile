@@ -1,20 +1,31 @@
-build-react:
+# Bundle the React frontend into static files
+react:
 	@echo "Building the React frontend..."
-	@cd application/frontend && npm run build
+	@cd application/frontend-chakra && npm run build
 
-build-container:
+# Run docker locally
+container:
 	@echo "Containerizing the application..."
 	@docker compose down
-	@docker compose up --build -d
+	@if [ ! -z $(build) ]; then 	\
+		docker compose up --build;	\
+	else							\
+		docker compose up; 			\
+	fi
 
-build-app:
+# Wraps the two commands above
+app:
 	@docker compose down
-	@make build-react
-	@make build-container
+	@make react
+	@make container
 
+# Pushes to the remote branch
+# NOTE - This only works on a clean branch with no unstaged changes
 push:
-	@echo "Checking for unstaged changes..."
-	@bash deploy/branch_changes.sh
-	@make build-react
+	@if [ ! -z $(force) ]; then						\
+		echo "Checking for unstaged changes...";	\
+		bash deploy/branch_changes.sh;				\
+	fi
+	@make react
 	@echo "Pushing to GitHub..."
-	@git add . && git commit -m "compile react" && git push
+	@git add . && git commit -m "compiled react frontend" && git push

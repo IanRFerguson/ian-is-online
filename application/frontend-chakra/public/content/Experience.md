@@ -1,6 +1,6 @@
 ## The Movement Cooperative
 - *Associate Engineering Manager* | March 2024 - Present
-- ![tmc](../assets/experience/tmc.jpg)
+- ![tmc](../assets/experience/tmc-2.jpg)
 - Tags: Engineering
 - Badges:
 - List Items:
@@ -10,7 +10,7 @@
 
 ## The Movement Cooperative 
 - *Data Engineer* | March 2023 - March 2024
-- ![tmc](../assets/experience/tmc.jpg)
+- ![tmc](../assets/experience/tmc-2.jpg)
 - Tags: Engineering
 - Badges:
 - List Items:

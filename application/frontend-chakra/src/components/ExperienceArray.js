@@ -21,7 +21,7 @@ const parseExperience = (mdContent) => {
       const badges = [];
       const listItems = [];
 
-      while (lines[++i] && !lines[i].startsWith("- Badges:")) {}
+      while (lines[++i] && !lines[i].startsWith("- Badges:")) { }
       while (lines[++i] && lines[i].startsWith("  - ")) {
         const badgeLine = lines[i].substr(4).split("[");
         const badgeName = badgeLine[0].trim();
@@ -52,21 +52,22 @@ const ExperienceArray = () => {
   const [experience, setExperience] = useState([]);
 
   useEffect(() => {
-    fetch("/content/Experience.md")
+    fetch("/content/Experience.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch markdown content");
         }
-        return response.text();
+        return response.json();
       })
-      .then((mdContent) => {
-        setExperience(parseExperience(mdContent));
+      .then((jsonContent) => {
+        setExperience(jsonContent);
       })
       .catch((error) => {
         console.error("Error fetching markdown content:", error);
       });
   }, []);
 
+  console.log(experience)
   return experience;
 };
 

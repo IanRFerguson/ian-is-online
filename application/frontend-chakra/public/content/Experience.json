@@ -1,0 +1,67 @@
+[
+    {
+        "company": "The Movement Cooperative",
+        "image": "../assets/experience/tmc-2.jpg",
+        "location": "Washington, D.C.",
+        "positions": [
+            {
+                "title": "Associate Engineering Manager",
+                "duration": "March 2024 - Present",
+                "summary": [
+                    "As the engineering manager, I plan our biweekly sprints, refine our backlog, scope long-term epics, and supervise individual contributors on the team directly.",
+                    "As an individual contributor, I am tasked with architecting our data observability pipelines using Elementary, dbt, and Hex to monitor and report on the health of our data warehouse at a macro level."
+                ]
+            },
+            {
+                "title": "Data Engineer",
+                "duration": "March 2023 - March 2024",
+                "summary": [
+                    "In this role I collaborated in executing numerous technical projects, including a warehouse migration from AWS to GCP, adopting dbt and Docker to our tech stack, and converting dozens of one-off ELT pipelines into a suite of reusable Python operators."
+                ]
+            }
+        ]
+    },
+    {
+        "company": "Movement Labs",
+        "image": "../assets/experience/movement_labs.jpg",
+        "location": "Oakland, California",
+        "positions": [
+            {
+                "title": "Software Engineer",
+                "duration": "June 2022 - March 2023",
+                "summary": [
+                    "I provided engineering support to multiple programs during the Midterm Elections. In various projects I built and deployed a GIS interface to enable custom reporting, developed site reliability automations, built a core data model for peer-to-peer contacts in dbt, and enabled robust reporting"
+                ]
+            }
+        ]
+    },
+    {
+        "company": "Stanford Social Neuroscience Lab",
+        "image": "../assets/experience/stanford.png",
+        "location": "Palo Alto, California",
+        "positions": [
+            {
+                "title": "Lab Manager + Research Engineer",
+                "duration": "June 2020 - September 2022",
+                "summary": [
+                    "As the lab manager, I facilitated day-to-day operations of the lab, including expense tracking, hiring, and participant recruitment and compensation.",
+                    "As the research engineer, I developed a Python package to model fMRI analyses in a templated fashion (GLM Express), and designed a Flask UI to automate the completion of common expense forms."
+                ]
+            }
+        ]
+    },
+    {
+        "company": "Social Cognitive and Neural Sciences Lab",
+        "image": "../assets/experience/nyu.jpg",
+        "location": "New York, New York",
+        "positions": [
+            {
+                "title": "Graduate Research Assistant",
+                "duration": "December 2018 - June 2020",
+                "summary": [
+                    "In addition to facilitating participant recruitment and compensation, I contributed to the lab's codebase by designing templated study stimuli generation scripts and an automated email reminder system for study partcipants."
+                ]
+            }
+        ]
+    }
+]

@@ -1,5 +1,5 @@
 ## The Movement Cooperative
-- *Associate Engineering Manager* | March 2024 - Present
+- *Associate Engineering Manager* | March 2023 - Present
 - ![tmc](../assets/experience/tmc-2.jpg)
 - Tags: Engineering
 - Badges:

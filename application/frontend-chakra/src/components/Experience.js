@@ -101,7 +101,10 @@ export default function Experience({ color }) {
                               <Text>{item.duration}</Text>
                               <Stack spacing={4}>
                                 {item.summary.map((summaryItem) => (
-                                  <Text>{summaryItem}</Text>
+                                  <Stack>
+                                    <Text fontWeight={600}>{summaryItem.sectionHeader}</Text>
+                                    <Text>{summaryItem.sectionValue}</Text>
+                                  </Stack>
                                 ))}
                               </Stack>
                             </ListItem>

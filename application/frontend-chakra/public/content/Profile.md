@@ -7,7 +7,7 @@
 - Short Description Here.
 
 ## About
-I am passionate about delivering 
+I'm an experienced technical leader with a passion for building robust, expressive systems. With a background that spans data engineering, development operations, and analytics, I bring a unique blend of expertise and strategic leadership to every project.
 
 ## Contact
 Write your contact info here

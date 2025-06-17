@@ -13,7 +13,7 @@ I develop data pipelines, tools, and applications to help progressive political 
 Write your contact info here
 - LinkedIn: https://www.linkedin.com/in/ianrferguson/
 - GitHub: https://github.com/IanRFerguson
-- Email: IANFERGUSONRVA@gmail.com
+- Email: IAN@ianferguson.dev
 - Instagram: https://www.instagram.com/human_cactus/
 
 ## Logo

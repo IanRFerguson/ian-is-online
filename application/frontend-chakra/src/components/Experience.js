@@ -24,6 +24,7 @@ import { Fade } from "react-reveal";
 import { useState, useEffect } from "react";
 import ExperienceArray from "./ExperienceArray";
 import TagsArray from "./TagsArray";
+import ExperienceItem from "./ExperienceItem";
 
 export default function Experience({ color }) {
   const experience = ExperienceArray();
@@ -75,7 +76,6 @@ export default function Experience({ color }) {
 
           <Stack px={4} spacing={4}>
             {experience
-              .filter((exp) => exp.tags.includes(selected))
               .map((exp) => (
                 <Fade bottom>
                   <Card key={exp.company} size="sm">
@@ -85,31 +85,26 @@ export default function Experience({ color }) {
                           <Image src={exp.image} h={50} />
                           <Box px={2} align="left">
                             <Text fontWeight={600}>{exp.company}</Text>
-                            <Text>{exp.position}</Text>
+                            <Text>{exp.location}</Text>
                           </Box>
                         </HStack>
-                        <Text px={2} fontWeight={300}>
+                        {/* <Text px={2} fontWeight={300}>
                           {exp.duration}
-                        </Text>
+                        </Text> */}
                       </Flex>
                     </CardHeader>
                     <CardBody>
                       <Flex>
-                        <List align="left" spacing={3}>
-                          {exp.listItems.map((item, index) => (
+                        <List align="left" spacing={5}>
+                          {exp.positions.map((item, index) => (
                             <ListItem key={index}>
-                              <ListIcon
-                                boxSize={6}
-                                as={ChevronRightIcon}
-                                color={`${color}.500`}
-                              />
-                              {item}
+                              <ExperienceItem item={item} />
                             </ListItem>
                           ))}
                         </List>
                       </Flex>
                     </CardBody>
-                    <CardFooter>
+                    {/* <CardFooter>
                       <HStack spacing={2}>
                         {exp.badges.map((badge) => (
                           <Badge
@@ -120,7 +115,7 @@ export default function Experience({ color }) {
                           </Badge>
                         ))}
                       </HStack>
-                    </CardFooter>
+                    </CardFooter> */}
                   </Card>
                 </Fade>
               ))}

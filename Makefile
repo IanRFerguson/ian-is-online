@@ -7,10 +7,10 @@ react:
 container:
 	@echo "Containerizing the application..."
 	@docker compose down
-	@if [ ! -z $(build) ]; then 	\
-		docker compose up --build;	\
-	else							\
-		docker compose up; 			\
+	@if [ ! -z $(build) ]; then \
+		docker compose up --build; \
+	else \
+		docker compose up; \
 	fi
 
 # Wraps the two commands above
@@ -22,9 +22,9 @@ app:
 # Pushes to the remote branch
 # NOTE - This only works on a clean branch with no unstaged changes
 push:
-	@if [ ! -z $(force) ]; then						\
-		echo "Checking for unstaged changes...";	\
-		bash deploy/branch_changes.sh;				\
+	@if [ ! -z $(force) ]; then \
+		echo "Checking for unstaged changes..."; \
+		bash deploy/branch_changes.sh; \
 	fi
 	@make react
 	@echo "Pushing to GitHub..."

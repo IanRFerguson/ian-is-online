@@ -1,75 +1,74 @@
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import CONFIG from '../emailConfig';
-import swal from 'sweetalert';
+import {
+  Divider,
+  Stack,
+  Text,
+  Container,
+  Box,
+  HStack,
+  Heading,
+  Center,
+} from "@chakra-ui/react";
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
+import ProfileArray from "./ProfileArray";
+import ContactForm from "./ContactForm";
 
+export default function Contact({ color }) {
+  const profile = ProfileArray();
+  const linkedin = () => {
+    window.open(`${profile.linkedin}`, "_blank", "noreferrer,noopener");
+  };
+  const github = () => {
+    window.open(`${profile.github}`, "_blank", "noreferrer,noopener");
+  };
+  const email = () => {
+    window.open(`mailto:${profile.email}`, "_blank", "noreferrer,noopener");
+  };
+  const instagram = () => {
+    window.open(`${profile.instagram}`, "_blank", "nonrefferer,noopener")
+  }
+  return (
+    <>
+      <Container maxW={"3xl"} id="contact">
+        <Stack
+          as={Box}
+          textAlign={"center"}
+          spacing={{ base: 8, md: 14 }}
+          pb={{ base: 20, md: 36 }}
+        >
+          <Stack align="center" direction="row" p={4}>
+            <HStack mx={4}>
+              <Text color={`${color}.400`} fontWeight={800}>
+                04
+              </Text>
+              <Text fontWeight={800}>Contact</Text>
+            </HStack>
+            <Divider orientation="horizontal" />
+          </Stack>
+          <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
+            <Heading fontSize={"3xl"}>Let's connect!</Heading>
+            <Text color={"gray.600"} fontSize={"xl"} px={4}>
+              If you'd like to discuss engineering your next project or New York Knicks basketball, feel free to drop me a note in the form below:
+            </Text>
 
+            {/* Preserving legacy code */}
+            {/* <Text color={`${color}.500`} fontWeight={600} fontSize={"lg"} px={4}>
+              {profile.email}
+            </Text> */}
 
-const ContactForm = () => {
-    const [isSubmitting, setIsSubmitting] = useState(false);
-
-    const sendEmail = (e) => {
-        e.persist();
-        e.preventDefault();
-        setIsSubmitting(true);
-
-        emailjs
-            .sendForm(
-                CONFIG.serviceID,
-                CONFIG.templateID,
-                e.target, {
-                publicKey: CONFIG.publicKey,
-            })
-            .then(
-                (result) => {
-                    swal("Thanks for reaching out! I'll get back to you soon 🫡");
-                    setIsSubmitting(false);
-                },
-                (error) => {
-                    console.log(error)
-                    swal("Sorry, something went wrong");
-                    setIsSubmitting(false);
-                }
-            );
-
-        // Clears the form after sending the email
-        e.target.reset();
-    };
-    return (
-        <form onSubmit={sendEmail}>
-            <div className='contactMeComponent'>
-                <input type="text" name="from__name" className='contactMeInputField' placeholder='Name' />
-            </div>
-            <div className='contactMeComponent'>
-                <input type="email" name="from__email" className='contactMeInputField' placeholder='Email Address' />
-            </div>
-            <div className='contactMeComponent'>
-                <textarea name="message" className='contactMeTextField' placeholder='Message' />
-            </div>
-            <div className='contactMeComponent'>
-                <input type="submit" value="Send" disabled={isSubmitting} className='writeToIan' />
-            </div>
-        </form>
-    );
-};
-
-const Contact = (props) => {
-    return (
-        <div className="sectionDisplay">
-            <div className="sectionHeader">
-                <h1>Contact Me</h1>
-            </div>
-            <div className="contactMeContent">
-                <p>
-                    Want to talk about engineering your next project?
-                    Knicks basketball?
-                    Street photography?
-                    Hit me up!
-                </p>
-                <ContactForm />
-            </div>
-        </div>
-    )
+            <Center>
+              <ContactForm />
+            </Center>
+            <Center>
+              <HStack pt={4} spacing={4}>
+                <FaLinkedin onClick={linkedin} size={28} />
+                <FaGithub onClick={github} size={28} />
+                <FaInstagram onClick={instagram} size={28} />
+              </HStack>
+            </Center>
+          </Stack>
+        </Stack>
+      </Container>
+    </>
+  );
 }
 
-export default Contact;

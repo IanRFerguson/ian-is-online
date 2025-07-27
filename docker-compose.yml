@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: ./deploy/Dockerfile
-    volumes:
-      - .:/app/
+    env_file:
+      - prod.env
     ports:
       - 5000:5000

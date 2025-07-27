@@ -3,7 +3,7 @@ import os
 
 ##########
 
-REACT_PATH = os.path.abspath("../frontend-chakra/build")
+REACT_PATH = os.path.abspath("../frontend/build")
 app = Flask(
     __name__, static_folder=REACT_PATH, template_folder=REACT_PATH, static_url_path="/"
 )

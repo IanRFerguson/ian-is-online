@@ -118,7 +118,7 @@ export default function Projects({ color }) {
             </ButtonGroup>
           </Center> */}
 
-          <SimpleGrid columns={[1, 2, 3]} px={4} spacing={4}>
+          <SimpleGrid columns={[1, 1, 1]} px={4} spacing={4}>
             {others
               .filter((other) => {
                 if (selected === "All") {

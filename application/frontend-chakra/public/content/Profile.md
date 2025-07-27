@@ -7,7 +7,7 @@
 - Short Description Here.
 
 ## About
-I'm an experienced technical leader with a passion for building robust, expressive systems. With a background that spans data engineering, development operations, and analytics, I bring a unique blend of expertise and strategic leadership to every project.
+I'm an experienced technical leader with a passion for building expressive systems and dynamic teams. With a background that spans software engineering, data infrastructure, analytics, and social psychology, I bring a unique blend of expertise and strategic leadership to every project.
 
 ## Contact
 Write your contact info here

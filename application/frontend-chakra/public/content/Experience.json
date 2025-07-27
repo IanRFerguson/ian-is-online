@@ -9,12 +9,12 @@
                 "duration": "March 2024 - Present",
                 "summary": [
                     {
-                        "sectionHeader": "What I Did",
-                        "sectionValue": "Track, refine, and implement development backlog in "
-                    },
-                    {
-                        "sectionHeader": "What I Built",
-                        "sectionValue": "Incident tracking and resolution pipeline to monitor the health of our multi-tenant warehouse"
+                        "sectionValue": [
+                            "Build out data engineering team's roadmap and plan bi-weekly sprints",
+                            "Manage individual contributors directly and scaffold their ",
+                            "Updated data observability and incident reporting pipelines to improve data quality and reliability",
+                            "Designed and deployed uptime monitoring to drive executive decision making"
+                        ]
                     }
                 ]
             },
@@ -23,12 +23,11 @@
                 "duration": "March 2023 - March 2024",
                 "summary": [
                     {
-                        "sectionHeader": "What I Did",
-                        "sectionValue": ""
-                    },
-                    {
-                        "sectionHeader": "What I Built",
-                        "sectionValue": ""
+                        "sectionValue": [
+                            "Led the organization's adoption of modern engineering tooling, including dbt, Terraform, and containerized runtime environments",
+                            "Migrated multi-tenant data warehouse from Redshift to BigQuery, and shipped a proprietary data governance system in the process",
+                            "Developed a suite of reusable operators to replace existing repository of ad-hoc ELT scripts"
+                        ]
                     }
                 ]
             }
@@ -44,12 +43,10 @@
                 "duration": "June 2022 - March 2023",
                 "summary": [
                     {
-                        "sectionHeader": "What I Did",
-                        "sectionValue": ""
-                    },
-                    {
-                        "sectionHeader": "What I Built",
-                        "sectionValue": ""
+                        "sectionValue": [
+                            "Led development of all in-house software products (web applications, Slack and Google Sheet integrations, and data pipelines)",
+                            "Built out self-service analytics platform to effectively get data in the hands of stakeholders"
+                        ]
                     }
                 ]
             }
@@ -65,12 +62,12 @@
                 "duration": "June 2020 - September 2022",
                 "summary": [
                     {
-                        "sectionHeader": "What I Did",
-                        "sectionValue": ""
-                    },
-                    {
-                        "sectionHeader": "What I Built",
-                        "sectionValue": ""
+                        "sectionValue": [
+                            "Built and shipped GLM Express, a configurable Python solution to modeling functional neuroimaging data",
+                            "Managed all administrative components of day-to-day lab operations, including budget management, scheduling, and onboarding",
+                            "Developed a Flask UI to automate common lab paperwork and human subjects recruitment templates",
+                            "Independent research leveraged unsupervised machine learning to explore the relationship between regional demographic trends and the use of hate speech online"
+                        ]
                     }
                 ]
             }
@@ -86,12 +83,11 @@
                 "duration": "December 2018 - June 2020",
                 "summary": [
                     {
-                        "sectionHeader": "What I Did",
-                        "sectionValue": ""
-                    },
-                    {
-                        "sectionHeader": "What I Built",
-                        "sectionValue": ""
+                        "sectionValue": [
+                            "Developed presentation stimului for ensemble encoding tasks",
+                            "Built a custom email reminder system to automate participant recruitment and scheduling",
+                            "Independent research explored conservative shift as a psychological response to changing national demographics"
+                        ]
                     }
                 ]
             }

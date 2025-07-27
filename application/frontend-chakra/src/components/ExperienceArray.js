@@ -67,7 +67,6 @@ const ExperienceArray = () => {
       });
   }, []);
 
-  console.log(experience)
   return experience;
 };
 

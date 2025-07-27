@@ -24,6 +24,7 @@ import { Fade } from "react-reveal";
 import { useState, useEffect } from "react";
 import ExperienceArray from "./ExperienceArray";
 import TagsArray from "./TagsArray";
+import ExperienceItem from "./ExperienceItem";
 
 export default function Experience({ color }) {
   const experience = ExperienceArray();
@@ -94,19 +95,10 @@ export default function Experience({ color }) {
                     </CardHeader>
                     <CardBody>
                       <Flex>
-                        <List align="left" spacing={3}>
+                        <List align="left" spacing={5}>
                           {exp.positions.map((item, index) => (
                             <ListItem key={index}>
-                              <Text fontWeight={600}>{item.title}</Text>
-                              <Text>{item.duration}</Text>
-                              <Stack spacing={4}>
-                                {item.summary.map((summaryItem) => (
-                                  <Stack>
-                                    <Text fontWeight={600}>{summaryItem.sectionHeader}</Text>
-                                    <Text>{summaryItem.sectionValue}</Text>
-                                  </Stack>
-                                ))}
-                              </Stack>
+                              <ExperienceItem item={item} />
                             </ListItem>
                           ))}
                         </List>

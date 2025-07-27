@@ -13,7 +13,7 @@ I'm an experienced technical leader with a passion for building expressive syste
 Write your contact info here
 - LinkedIn: https://www.linkedin.com/in/ianrferguson/
 - GitHub: https://github.com/IanRFerguson
-- Email: IANFERGUSONRVA@gmail.com
+- Email: IAN@ianferguson.dev
 - Instagram: https://www.instagram.com/human_cactus/
 
 ## Logo

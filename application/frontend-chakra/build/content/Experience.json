@@ -10,8 +10,8 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Build out data engineering team's roadmap and plan bi-weekly sprints",
-                            "Manage individual contributors directly and scaffold their ",
+                            "Build out data engineering team's quarterly roadmap and plan biweekly sprints",
+                            "Manage individual contributors directly and scaffold their development",
                             "Updated data observability and incident reporting pipelines to improve data quality and reliability",
                             "Designed and deployed uptime monitoring to drive executive decision making"
                         ]
@@ -24,7 +24,7 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Led the organization's adoption of modern engineering tooling, including dbt, Terraform, and containerized runtime environments",
+                            "Led the organization's adoption of modern engineering tooling, including dbt and containerized development environments",
                             "Migrated multi-tenant data warehouse from Redshift to BigQuery, and shipped a proprietary data governance system in the process",
                             "Developed a suite of reusable operators to replace existing repository of ad-hoc ELT scripts"
                         ]
@@ -84,7 +84,7 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Developed presentation stimului for ensemble encoding tasks",
+                            "Developed presentation stimului generator for ensemble encoding tasks",
                             "Built a custom email reminder system to automate participant recruitment and scheduling",
                             "Independent research explored conservative shift as a psychological response to changing national demographics"
                         ]

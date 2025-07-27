@@ -7,6 +7,4 @@ prod.env
 application/frontend-chakra/example
 application/frontend-chakra/*lock*
 application/frontend-chakra/README.md
-
-# TODO - Figure out a better workaround long term
-emailConfig.js
+application/frontend-chakra/build

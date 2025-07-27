@@ -1,0 +1,198 @@
+@media screen and (max-width: 5000px) {
+  .App {
+    text-align: center;
+  }
+
+  .App-header {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  /* SHARED RESOURCES */
+  .sectionDisplay {
+    height: 75vh;
+    margin: 3%;
+    padding: 1%;
+  }
+
+  .sectionDisplayFill {
+    height: 100%;
+  }
+
+  /* LANDING PAGE */
+  .landingDisplayContainer {
+    width: 72%;
+    margin: 0 auto;
+    padding-top: 5%;
+  }
+
+  .displayContainerLeft {
+    width: 50%;
+    float: left;
+  }
+
+  .ian-landed {
+    width: 75%;
+    border-radius: 50%;
+  }
+
+  .howdy {
+    font-size: 215%;
+  }
+
+  .landingSocialContact {
+    font-size: x-small;
+    display: inline-block;
+    padding: 1vw;
+  }
+
+  .displayContainerRight {
+    margin-left: 50%;
+  }
+
+  .summaryList {
+    list-style-type: none;
+  }
+
+  .summaryListItem {
+    text-decoration: none;
+    text-align: left;
+    font-size: 155%;
+    padding: 1vh 0;
+  }
+
+  .socialMediaLinks {
+    position: relative;
+  }
+
+  .socialMediaLinks img {
+    width: 7.5%;
+    padding: 3%;
+  }
+
+  /* ABOUT */
+  .aboutContent {
+    width: 100%;
+    margin: 0 auto;
+    font-size: larger;
+  }
+
+  .aboutParagraph {
+    padding: 1% 0;
+  }
+
+  .aboutParagraph ul {
+    list-style: none;
+  }
+
+  .aboutParagraph a {
+    color: black;
+    text-decoration: none;
+  }
+
+  /* ENGINEERING */
+  .engineeringContent {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .engineeringBlock {
+    padding: 1%
+  }
+
+  .engineeringCarouselItem {
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 3%;
+  }
+
+  .engineeringCarouselItem p {
+    font-size: 135%;
+  }
+
+  .engineeringCarouselItem h3 {
+    font-size: 135%;
+  }
+
+  .engineeringCarouselImage {
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+  }
+
+  /* CONTACT ME */
+  .contactMeContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactMeComponent {
+    padding: 1%;
+  }
+
+  .contactMeInputField {
+    width: 50%;
+    padding: 0.5%;
+    font-size: 100%;
+    border: 1px solid #ccc;
+  }
+
+  .contactMeComponent textarea {
+    width: 50%;
+    padding: 1.5%;
+    font-size: 130%;
+    border: 1px solid #ccc;
+    height: 10em;
+    font-family: inherit;
+  }
+
+  .contactMeInputField {
+    width: 50%;
+    padding: 1.5%;
+    font-size: 120%;
+  }
+
+  .contactMeTextField {
+    width: 50%;
+    padding: 1%;
+  }
+
+  .contactMeContent p {
+    font-size: 120%;
+  }
+
+  .writeToIan {
+    width: 25%;
+    background: #B83A4B;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px 5px;
+    padding: 1%;
+    font-size: 100%;
+  }
+
+  /* FOOTER */
+  .footerComponent {
+    margin: 0 auto;
+    padding: 1%;
+  }
+
+  .footerComponent h4 {
+    font-weight: normal;
+    font-size: 100%;
+  }
+}

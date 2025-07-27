@@ -1,0 +1,79 @@
+/* Mobile Devices */
+@media (max-width: 600px) {
+    /* SHARED RESOURCES */
+    .sectionDisplay {
+        height: 100vh;
+        margin: 3%;
+        padding: 3%;
+    }
+
+    /* LANDING PAGE */
+    .landingDisplayContainer {
+        width: 100%;
+        padding-top: 8%;
+    }
+
+    .displayContainerLeft {
+        width: auto;
+    }
+
+    .displayContainerRight {
+        display: inline-block;
+        margin-left: auto;
+        padding-top: 0;
+    }
+
+    .ian-landed {
+        border-radius: 25%;
+        padding: 1%;
+    }
+
+    .socialMediaLinks {
+        padding: 1%;
+    }
+
+    .summaryListItem {
+        font-size: 120%;
+    }
+
+    /* ENGINEERING */
+    .engineeringCarouselItem {
+        width: 75%
+    }
+
+    .engineeringCarouselItem p {
+        padding: 2.5%;
+        font-size: 115%;
+    }
+
+    /* CONTACT */
+    .contactMeComponent {
+        padding: 3%;
+    }
+
+    .contactMeComponent textarea {
+        width: 90%;
+        height: 10em;
+    }
+
+    .contactMeInputField {
+        width: 90%;
+        padding: 2%;
+    }
+
+    .writeToIan {
+        width: 45%;
+        padding: 3%;
+    }
+
+    /* FOOTER */
+    .footerComponent {
+        padding-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    .sectionDisplay {
+        height: 100vh;
+    }
+}

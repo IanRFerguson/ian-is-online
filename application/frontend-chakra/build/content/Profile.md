@@ -7,7 +7,7 @@
 - Short Description Here.
 
 ## About
-I develop data pipelines, tools, and applications to help progressive political organizations build power. My team at The Movement Cooperative is tasked with building scalable cloud infrastructure to provide the progressive left with reliable data systems.
+I'm an experienced technical leader with a passion for building expressive systems and dynamic teams. With a background that spans software engineering, data infrastructure, analytics, and social psychology, I bring a unique blend of expertise and strategic leadership to every project.
 
 ## Contact
 Write your contact info here

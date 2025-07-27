@@ -1,15 +1,21 @@
-FROM python:alpine
+# Step 1 - Build react frontend
+FROM node:20 AS builder
+
+WORKDIR /app/application/frontend
+COPY ./application/frontend .
+
+RUN npm install && npm run build
+
+# Step 2 - Serve the frontend with Flask
+FROM python:3.12-slim
 
 WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-RUN mkdir -p /app/application/backend
-RUN mkdir -p /app/application/frontend-chakra
-
 COPY ./application/backend /app/application/backend
-COPY ./application/frontend-chakra /app/application/frontend-chakra
+COPY --from=builder /app/application/frontend /app/application/frontend
 
 WORKDIR /app/application/backend
 

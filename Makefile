@@ -19,6 +19,11 @@ app:
 	@make react
 	@make container
 
+
+shell:
+	@docker compose up -d;
+	@docker compose exec -it ian-is-online bash;
+
 # Pushes to the remote branch
 # NOTE - This only works on a clean branch with no unstaged changes
 push:

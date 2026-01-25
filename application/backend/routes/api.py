@@ -1,0 +1,67 @@
+import os
+from typing import Tuple
+
+import resend
+from flask import Blueprint, Response, jsonify, request
+from utilities import application_logger
+
+#####
+
+api_bp = Blueprint("api", __name__, url_prefix="/api")
+
+
+@api_bp.route("/fetch_key", methods=["GET"])
+def fetch_key() -> Tuple[Response, int]:
+    """
+    Fetches the RESEND_API_KEY from environment variables and returns it as JSON.
+    If the key is not set, returns an error message.
+
+    Returns:
+        Tuple[Response, int]: A tuple containing the JSON response and the HTTP status code.
+    """
+
+    application_logger.debug("Fetching RESEND_API_KEY from environment variables...")
+    api_key = os.environ.get("RESEND_API_KEY")
+
+    if not api_key:
+        application_logger.error("RESEND_API_KEY not set in environment variables.")
+        return jsonify({"error": "RESEND_API_KEY not set"}), 500
+
+    return jsonify({"api": api_key}), 200
+
+
+@api_bp.route("/send", methods=["POST"])
+def send_email() -> Tuple[Response, int]:
+    """
+    Sends an email using the Resend service with data from the request.
+
+    Returns:
+        Tuple[Response, int]: A tuple containing the JSON response and
+        the HTTP status code.
+    """
+
+    application_logger.info("Received send_email request...")
+
+    # Get JSON data from the request
+    resp = request.get_json()
+
+    # Extract necessary fields
+    name = resp.get("name")
+    email = resp.get("email")
+    message = resp.get("message")
+
+    params = {
+        "from": "Contact Form <hello@ianferguson.dev>",  # Use your authenticated domain
+        "to": [os.environ.get("CONTACT_EMAIL")],
+        "subject": f"New Message from {name}",
+        "html": f"<p><strong>From:</strong> {name} ({email})</p><p>{message}</p>",
+    }
+
+    try:
+        r = resend.Emails.send(params=params)
+        application_logger.info("Email sent successfully")
+        return jsonify({"message": "Email sent successfully", "response": r}), 200
+
+    except Exception as e:
+        application_logger.error(f"Error sending email: {e}")
+        return jsonify({"error": str(e)}), 500

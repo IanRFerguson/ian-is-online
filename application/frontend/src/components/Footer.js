@@ -18,8 +18,8 @@ export default function Footer() {
         py={4}
         align="center"
       >
-        <Text>Made with ❤️ in San Francisco</Text>
-        <Text> <a href="https://github.com/eldoraboo/portable-portfolio" target="_blank">View React Template</a></Text>
+        <Text fontFamily={"monospace"} fontSize={"110%"}>Made with ❤️ in San Francisco</Text>
+        <Text fontFamily={"monospace"}> <a href="https://github.com/eldoraboo/portable-portfolio" target="_blank">View React Template</a></Text>
       </Container>
     </Box >
   );

@@ -15,9 +15,9 @@ Using Prefect as an orchestration tool, this project extracts data from the NBA 
 - Buttons:
   - Source Code [https://github.com/IanRFerguson/player-analytics]
 
-## Whiskey ML
+## Predicting Whiskey Ratings
 This is an end-to-end Machine Learning pipeline designed to predict my ratings of different whiskeys from around the world. The ML models are integrated with dbt so that all the transformations and predictions occur seamlessly in one project.
-- ![whiskey-ml](../assets/projects/whiskey-ml.png)
+- ![whiskey-ml](../assets/projects/whiskey-ml-v2.png)
 - Tags: Category 1
 - Badges:
 - Buttons:

@@ -13,7 +13,7 @@ services:
   backend:
     build:
       context: .
-      dockerfile: ./deploy/Dockerfile
+      dockerfile: ./deploy/Dockerfile.backend
     env_file:
       - prod.env
     environment:

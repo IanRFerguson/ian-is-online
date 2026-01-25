@@ -278,6 +278,7 @@ dependencies = [
     { name = "flask" },
     { name = "google-cloud-logging" },
     { name = "gunicorn" },
+    { name = "requests" },
     { name = "resend" },
 ]
 
@@ -287,6 +288,7 @@ requires-dist = [
     { name = "flask", specifier = "==3.0.0" },
     { name = "google-cloud-logging", specifier = "==3.13.0" },
     { name = "gunicorn", specifier = "==20.0.4" },
+    { name = "requests", specifier = ">=2.31.0" },
     { name = "resend", specifier = "==2.21.0" },
 ]
 

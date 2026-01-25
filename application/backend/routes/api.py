@@ -1,6 +1,9 @@
 import os
 from typing import Tuple
+import xml.etree.ElementTree as ET
+from datetime import datetime
 
+import requests
 import resend
 from flask import Blueprint, Response, jsonify, request
 from utilities import application_logger
@@ -65,3 +68,62 @@ def send_email() -> Tuple[Response, int]:
     except Exception as e:
         application_logger.error(f"Error sending email: {e}")
         return jsonify({"error": str(e)}), 500
+
+
+@api_bp.route("/medium", methods=["GET"])
+def get_medium_articles() -> Tuple[Response, int]:
+    """
+    Fetches the latest Medium articles from the RSS feed.
+
+    Returns:
+        Tuple[Response, int]: A tuple containing the JSON response with articles
+        and the HTTP status code.
+    """
+
+    application_logger.info("Fetching Medium RSS feed...")
+
+    try:
+        # Fetch the RSS feed
+        response = requests.get("https://medium.com/feed/@ianfergusonrva", timeout=10)
+        response.raise_for_status()
+
+        # Parse XML
+        root = ET.fromstring(response.content)
+
+        # Extract articles (limit to 3)
+        articles = []
+        items = root.findall(".//item")[:3]
+
+        for item in items:
+            title = (
+                item.find("title").text
+                if item.find("title") is not None
+                else "No Title"
+            )
+            link = item.find("link").text if item.find("link") is not None else ""
+            pub_date = (
+                item.find("pubDate").text if item.find("pubDate") is not None else ""
+            )
+
+            # Parse and format the date
+            if pub_date:
+                try:
+                    dt = datetime.strptime(pub_date, "%a, %d %b %Y %H:%M:%S %Z")
+                    formatted_date = dt.strftime("%B %d, %Y")
+                except Exception:
+                    formatted_date = pub_date
+
+            articles.append(
+                {
+                    "title": title,
+                    "link": link,
+                    "date": formatted_date if pub_date else "Unknown date",
+                }
+            )
+
+        application_logger.info(f"Successfully fetched {len(articles)} articles")
+        return jsonify({"articles": articles}), 200
+
+    except Exception as e:
+        application_logger.error(f"Error fetching Medium articles: {e}")
+        return jsonify({"error": str(e), "articles": []}), 500

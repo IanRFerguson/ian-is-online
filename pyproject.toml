@@ -10,6 +10,7 @@ dependencies = [
     "colorlog==6.10.1",
     "google-cloud-logging==3.13.0",
     "resend==2.21.0",
+    "requests>=2.31.0",
 ]
 
 

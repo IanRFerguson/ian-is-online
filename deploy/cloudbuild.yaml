@@ -1,14 +1,21 @@
   steps:
   # Build the container image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/ian-is-online/ianferguson-dev:$COMMIT_SHA', '-f', 'deploy/Dockerfile', '.']
+    id: 'Build Docker Image'
+    args: ['build', '-t', 'gcr.io/ian-is-online/ianferguson-dev:$COMMIT_SHA', '-t', 'gcr.io/ian-is-online/ianferguson-dev:latest', '-f', 'deploy/Dockerfile', '.']
   
   # Push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
+    id: "Push Docker Image [tag=$COMMIT_SHA]"
     args: ['push', 'gcr.io/ian-is-online/ianferguson-dev:$COMMIT_SHA']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: "Push Docker Image [tag=latest]"
+    args: ['push', 'gcr.io/ian-is-online/ianferguson-dev:latest']
   
   # Deploy container image to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy to Cloud Run'
     entrypoint: gcloud
     args:
     - 'run'
@@ -21,6 +28,7 @@
   
   images:
   - 'gcr.io/ian-is-online/ianferguson-dev:$COMMIT_SHA'
+  - 'gcr.io/ian-is-online/ianferguson-dev:latest'
   
   options:
     logging: CLOUD_LOGGING_ONLY

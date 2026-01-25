@@ -5,5 +5,21 @@ services:
       dockerfile: ./deploy/Dockerfile
     env_file:
       - prod.env
+    environment:
+      - STAGE=dev
+      - DEBUG=true
     ports:
       - 5000:5000
+  backend:
+    build:
+      context: .
+      dockerfile: ./deploy/Dockerfile
+    env_file:
+      - prod.env
+    environment:
+      - STAGE=dev
+      - DEBUG=true
+    ports:
+      - 5000:5000
+    volumes:
+      - ./application/backend:/app/application/backend

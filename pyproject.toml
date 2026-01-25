@@ -1,0 +1,43 @@
+[project]
+name = "ian-is-online"
+version = "0.1.0"
+description = "A personal website to showcase my projects and blog posts."
+readme = "README.md"
+requires-python = "~=3.12.0"
+dependencies = [
+    "Flask==3.0.0",
+    "gunicorn==20.0.4",
+    "colorlog==6.10.1",
+    "google-cloud-logging==3.13.0",
+    "resend==2.21.0",
+]
+
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py312"
+
+
+[tool.ruff.lint]
+extend-ignore = [
+    "F401",
+    "E203",
+    "E266",
+    "E402",
+    "E501",
+    "E711",
+    "E712",
+    "F403",
+    "F821",
+]
+select = ["E", "F", "I"]
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = false
+docstring-code-line-length = "dynamic"

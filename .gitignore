@@ -3,6 +3,8 @@ prod.env
 *.pyc*
 *.DS_Store*
 *node_modules
+infra/.terraform*
+infra/out
 
 application/frontend-chakra/example
 application/frontend-chakra/*lock*

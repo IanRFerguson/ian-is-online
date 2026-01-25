@@ -33,18 +33,13 @@ resource "google_cloud_run_v2_service" "cloud_run_service" {
         }
       }
 
-      // EmailJS environment variables
       env {
-        name  = "REACT_APP_EMAIL_SERVICE_ID"
-        value = var.emailjs_service_id
+        name  = "RESEND_API_KEY"
+        value = var.resend_api_key
       }
       env {
-        name  = "REACT_APP_EMAIL_TEMPLATE_ID"
-        value = var.emailjs_template_id
-      }
-      env {
-        name  = "REACT_APP_EMAIL_PUBLIC_KEY"
-        value = var.emailjs_public_key
+        name  = "CONTACT_EMAIL"
+        value = var.contact_email
       }
     }
   }

@@ -9,21 +9,13 @@ variable "image_name" {
   type        = string
 }
 
-// Email JS config
-variable "emailjs_service_id" {
-  description = "EmailJS Service ID"
+variable "resend_api_key" {
+  description = "The API key for Resend email service"
   type        = string
   sensitive   = true
 }
 
-variable "emailjs_template_id" {
-  description = "EmailJS Template ID"
+variable "contact_email" {
+  description = "The contact email address for the application"
   type        = string
-  sensitive   = true
-}
-
-variable "emailjs_public_key" {
-  description = "Public key to connect to EmailJS"
-  type        = string
-  sensitive   = true
 }

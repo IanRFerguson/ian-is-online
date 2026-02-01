@@ -10,10 +10,10 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Build out data engineering team's quarterly roadmap and plan biweekly sprints",
-                            "Manage individual contributors directly and scaffold their development",
-                            "Updated data observability and incident reporting pipelines to improve data quality and reliability",
-                            "Designed and deployed uptime monitoring to drive executive decision making"
+                            "Directly manage and mentor a cross-functional team of junior and senior engineers to ship high-impact data products",
+                            "Architect the engineering roadmap, translating long-term quarterly objectives into actionable, bi-weekly sprint execution",
+                            "Spearheaded the technical evaluation and successful adoption of the cooperative’s next-generation data orchestration platform",
+                            "Overhauled data observability and incident reporting pipelines to fortify data integrity and support executive-level strategy"
                         ]
                     }
                 ]
@@ -24,9 +24,9 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Led the organization's adoption of modern engineering tooling, including dbt and containerized development environments",
-                            "Migrated multi-tenant data warehouse from Redshift to BigQuery, and shipped a proprietary data governance system in the process",
-                            "Developed a suite of reusable operators to replace existing repository of ad-hoc ELT scripts"
+                            "Modernized the engineering stack by integrating dbt and Dockerized development environments into the core workflow",
+                            "Engineered a seamless multi-tenant data warehouse migration from AWS to GCP, deploying a custom data governance system in tandem",
+                            "Refactored dozens of fragmented ETL pipelines into a unified, scalable architecture using abstracted Python operators"
                         ]
                     }
                 ]
@@ -44,8 +44,9 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Led development of all in-house software products (web applications, Slack and Google Sheet integrations, and data pipelines)",
-                            "Built out self-service analytics platform to effectively get data in the hands of stakeholders"
+                            "Served as the lead architect for the organization's data infrastructure, encompassing end-to-end ETL pipelines, schema design, and self-service BI tools",
+                            "Built and deployed site reliability tooling to monitor and maintain a fleet of Dockerized microservices on AWS",
+                            "Partnered with cross-functional stakeholders to bridge the gap between complex data requirements and actionable business intelligence"
                         ]
                     }
                 ]
@@ -63,10 +64,10 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Built and shipped GLM Express, a configurable Python solution to modeling functional neuroimaging data",
-                            "Managed all administrative components of day-to-day lab operations, including budget management, scheduling, and onboarding",
-                            "Developed a Flask UI to automate common lab paperwork and human subjects recruitment templates",
-                            "Independent research leveraged unsupervised machine learning to explore the relationship between regional demographic trends and the use of hate speech online"
+                            "Developed and launched GLM Express, a configurable Python framework for modeling functional neuroimaging data",
+                            "Orchestrated all operational logistics, including budget oversight, personnel onboarding, and department scheduling",
+                            "Built a custom Flask interface to automate administrative workflows and streamline human subjects recruitment",
+                            "Conducted independent research utilizing unsupervised machine learning to analyze the nexus between regional demographics and online hate speech"
                         ]
                     }
                 ]
@@ -84,9 +85,9 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Developed presentation stimului generator for ensemble encoding tasks",
-                            "Built a custom email reminder system to automate participant recruitment and scheduling",
-                            "Independent research explored conservative shift as a psychological response to changing national demographics"
+                            "Engineered a stimulus generation engine for ensemble encoding tasks, improving the precision of experimental presentations",
+                            "Developed an automated participant management system to optimize recruitment and reduce scheduling overhead",
+                            "Led research exploring the psychological drivers of political shifts in response to shifting national demographics"
                         ]
                     }
                 ]

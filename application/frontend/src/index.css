@@ -5,9 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  /* Prevents text inflation on iOS */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Ensure proper touch targets on mobile */
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Prevent iOS zoom on input focus */
+input[type="text"],
+input[type="email"],
+textarea {
+  font-size: 16px !important;
 }

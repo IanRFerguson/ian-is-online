@@ -12,6 +12,15 @@ wheels = [
 ]
 
 [[package]]
+name = "cachelib"
+version = "0.9.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/79/f2/1c76df4d295789bbc836eea50b813d64f86e640c29fe8f0a3686e9c4e3e9/cachelib-0.9.0.tar.gz", hash = "sha256:38222cc7c1b79a23606de5c2607f4925779e37cdcea1c2ad21b8bae94b5425a5", size = 21007, upload-time = "2022-06-26T17:56:58.916Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/93/70/58e525451478055b0fd2859b22226888a6985d404fe65e014fc4893d3b75/cachelib-0.9.0-py3-none-any.whl", hash = "sha256:811ceeb1209d2fe51cd2b62810bd1eccf70feba5c52641532498be5c675493b3", size = 15716, upload-time = "2022-06-26T17:56:57.055Z" },
+]
+
+[[package]]
 name = "certifi"
 version = "2026.1.4"
 source = { registry = "https://pypi.org/simple" }
@@ -92,6 +101,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/d8/09/c1a7354d3925a3c6c8cfdebf4245bae67d633ffda1ba415add06ffc839c5/flask-3.0.0.tar.gz", hash = "sha256:cfadcdb638b609361d29ec22360d6070a77d7463dcb3ab08d2c2f2f168845f58", size = 674171, upload-time = "2023-09-30T14:36:12.918Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/36/42/015c23096649b908c809c69388a805a571a3bea44362fe87e33fc3afa01f/flask-3.0.0-py3-none-any.whl", hash = "sha256:21128f47e4e3b9d597a3e8521a329bf56909b690fcc3fa3e477725aa81367638", size = 99724, upload-time = "2023-09-30T14:36:10.961Z" },
+]
+
+[[package]]
+name = "flask-caching"
+version = "2.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cachelib" },
+    { name = "flask" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/eb/70/09b3254474c0a9085f5faa2fd4da9bbd5318b370e30c4489067db1ead842/Flask-Caching-2.1.0.tar.gz", hash = "sha256:b7500c145135836a952e3de3a80881d9654e327a29c852c9265607f5c449235c", size = 67277, upload-time = "2023-10-08T14:16:00.245Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/49/99/e279e06a1a0147763bda92359b3fa5eab8566e032407e539eb851cdfb4bc/Flask_Caching-2.1.0-py3-none-any.whl", hash = "sha256:f02645a629a8c89800d96dc8f690a574a0d49dcd66c7536badc6d362ba46b716", size = 28768, upload-time = "2023-10-08T14:15:58.133Z" },
 ]
 
 [[package]]
@@ -276,6 +298,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "colorlog" },
     { name = "flask" },
+    { name = "flask-caching" },
     { name = "google-cloud-logging" },
     { name = "gunicorn" },
     { name = "requests" },
@@ -286,6 +309,7 @@ dependencies = [
 requires-dist = [
     { name = "colorlog", specifier = "==6.10.1" },
     { name = "flask", specifier = "==3.0.0" },
+    { name = "flask-caching", specifier = "==2.1.0" },
     { name = "google-cloud-logging", specifier = "==3.13.0" },
     { name = "gunicorn", specifier = "==20.0.4" },
     { name = "requests", specifier = ">=2.31.0" },

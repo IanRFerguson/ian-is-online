@@ -1,7 +1,7 @@
 import os
-from typing import Tuple
 import xml.etree.ElementTree as ET
 from datetime import datetime
+from typing import Tuple
 
 import requests
 import resend
@@ -11,6 +11,15 @@ from utilities import application_logger
 #####
 
 api_bp = Blueprint("api", __name__, url_prefix="/api")
+
+# Cache will be initialized by main.py
+cache = None
+
+
+def init_cache(cache_instance):
+    """Initialize the cache instance for this blueprint."""
+    global cache
+    cache = cache_instance
 
 
 @api_bp.route("/fetch_key", methods=["GET"])
@@ -74,13 +83,22 @@ def send_email() -> Tuple[Response, int]:
 def get_medium_articles() -> Tuple[Response, int]:
     """
     Fetches the latest Medium articles from the RSS feed.
+    Results are cached for 30 minutes to avoid rate limiting.
 
     Returns:
         Tuple[Response, int]: A tuple containing the JSON response with articles
         and the HTTP status code.
     """
 
-    application_logger.info("Fetching Medium RSS feed...")
+    # Try to get cached data first
+    if cache:
+        cached_data = cache.get("medium_articles")
+        if cached_data:
+            application_logger.info("Returning cached Medium articles")
+            return jsonify(cached_data), 200
+
+    application_logger.info("Fetching Medium RSS feed from source...")
+    FETCH_LIMIT = 5
 
     try:
         # Fetch the RSS feed
@@ -90,9 +108,9 @@ def get_medium_articles() -> Tuple[Response, int]:
         # Parse XML
         root = ET.fromstring(response.content)
 
-        # Extract articles (limit to 3)
+        # Extract articles (limit to the latest FETCH_LIMIT)
         articles = []
-        items = root.findall(".//item")[:3]
+        items = root.findall(".//item")[:FETCH_LIMIT]
 
         for item in items:
             title = (
@@ -112,14 +130,42 @@ def get_medium_articles() -> Tuple[Response, int]:
                     formatted_date = dt.strftime("%B %d, %Y")
                 except Exception:
                     formatted_date = pub_date
+            else:
+                formatted_date = "Unknown date"
 
             articles.append(
                 {
                     "title": title,
                     "link": link,
-                    "date": formatted_date if pub_date else "Unknown date",
+                    "date": formatted_date,
                 }
             )
+
+        result = {"articles": articles}
+
+        # Cache the successful result for 30 minutes (1800 seconds)
+        if cache:
+            cache.set("medium_articles", result, timeout=1800)
+            application_logger.info(
+                f"Successfully fetched and cached {len(articles)} articles"
+            )
+        else:
+            application_logger.info(
+                f"Successfully fetched {len(articles)} articles (cache not available)"
+            )
+
+        return jsonify(result), 200
+
+    except Exception as e:
+        application_logger.error(f"Error fetching Medium articles: {e}")
+        # If cache exists and request failed, try to return stale cache
+        if cache:
+            stale_data = cache.get("medium_articles")
+            if stale_data:
+                application_logger.warning(
+                    "Returning stale cached data due to fetch error"
+                )
+                return jsonify(stale_data), 200
 
         application_logger.info(f"Successfully fetched {len(articles)} articles")
         return jsonify({"articles": articles}), 200

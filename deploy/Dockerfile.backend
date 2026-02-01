@@ -6,7 +6,6 @@ COPY pyproject.toml .
 RUN pip install uv && uv sync
 
 COPY ./application/backend /app/application/backend
-COPY --from=builder /app/application/frontend /app/application/frontend
 
 WORKDIR /app/application/backend
 

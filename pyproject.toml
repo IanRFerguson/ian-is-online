@@ -11,6 +11,7 @@ dependencies = [
     "google-cloud-logging==3.13.0",
     "resend==2.21.0",
     "requests>=2.31.0",
+    "Flask-Caching==2.1.0",
 ]
 
 

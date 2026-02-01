@@ -9,7 +9,7 @@ import {
 export default function Header({ color }) {
   const profile = {
     headerName: "Howdy! I'm Ian",
-    headerRole: "I'm an engineer based in Brooklyn, New York",
+    headerRole: "I'm a developer based in Brooklyn, New York",
     linkedin: "https://www.linkedin.com/in/ianrferguson/",
   };
 

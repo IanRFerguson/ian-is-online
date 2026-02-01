@@ -8,3 +8,6 @@ app:
 
 backend:
 	@docker compose up --build backend
+
+frontend:
+	@cd application/frontend && npm run start

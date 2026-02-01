@@ -166,10 +166,4 @@ def get_medium_articles() -> Tuple[Response, int]:
                     "Returning stale cached data due to fetch error"
                 )
                 return jsonify(stale_data), 200
-
-        application_logger.info(f"Successfully fetched {len(articles)} articles")
-        return jsonify({"articles": articles}), 200
-
-    except Exception as e:
-        application_logger.error(f"Error fetching Medium articles: {e}")
         return jsonify({"error": str(e), "articles": []}), 500

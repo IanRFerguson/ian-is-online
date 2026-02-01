@@ -39,7 +39,7 @@ export default function Header({ color }) {
             <Text
               as={"span"}
               color={`${color}.400`}
-              fontSize={{ base: "lg", sm: "4xl", md: "6xl" }}
+              fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
             >
               {profile.headerRole}
             </Text>

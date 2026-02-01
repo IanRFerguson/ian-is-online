@@ -1,5 +1,5 @@
 ## WFP 🤝 NYC
-I analyzed the percentage of Kamala Harris votes that were cast on the Working Families Party line in New York City. Results were presented in a Folium choropleth map and hosted in a Flask application via Google Cloud Run.
+Using publicly available election data, I built an interactive Choropleth map to display the percentage of votes that Kamala Harris earned on the Working Families Party line in New York City. Flask serves the map, and Google Cloud Run hosts the web application in the cloud.
 - ![wfp-nyc](../assets/projects/wfp-nyc.jpeg)
 - Tags: Category 1
 - Badges:
@@ -8,7 +8,7 @@ I analyzed the percentage of Kamala Harris votes that were cast on the Working F
   - See the App [https://wfp-nyc-817201868807.us-central1.run.app]
 
 ## NBA Player Analytics
-Using Prefect as an orchestration tool, this project extracts data from the NBA API, loads it into BigQuery, and models it with dbt to extract valuable game-over-game metrics and player-specific performance summaries.
+This is an end-to-end ELT pipeline - player data is extracted from the NBA API, loaded into BigQuery, and transformed using dbt. The resulting models offer player- and team-specific trends, including matchup statistics and gametime conditions (home vs. away, back to backs. etc.)
 - ![nba-dag](../assets/projects/nba-dag.png)
 - Tags: Category 1
 - Badges:
@@ -16,7 +16,7 @@ Using Prefect as an orchestration tool, this project extracts data from the NBA 
   - Source Code [https://github.com/IanRFerguson/player-analytics]
 
 ## Predicting Whiskey Ratings
-This is an end-to-end Machine Learning pipeline designed to predict my ratings of different whiskeys from around the world. The ML models are integrated with dbt so that all the transformations and predictions occur seamlessly in one project.
+Built off of a single Google Sheet, this project models my preferences in whiskey based on a number of dimensions (style, ABV, flavor notes, etc). The raw input is fed into BigQuery, where dbt transforms and standardizes it before passing it off to Google Dataproc to run Spark MLlib predictive models.
 - ![whiskey-ml](../assets/projects/whiskey-ml-v2.png)
 - Tags: Category 1
 - Badges:

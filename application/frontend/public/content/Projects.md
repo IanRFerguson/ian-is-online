@@ -22,3 +22,12 @@ Built off of a single Google Sheet, this project models my preferences in whiske
 - Badges:
 - Buttons:
   - Source Code [https://github.com/IanRFerguson/whiskey-ml]
+
+## Klondike
+Klondike is a unified API to faciliate read and write operations across various data warehouse types using lightning fast Polars DataFrames.
+- ![klondike](../assets/projects/klondike.png)
+- Tags: Category 1
+- Badges:
+- Buttons:
+  - Source Code [https://github.com/IanRFerguson/klondike]
+  - PyPi Registry [https://pypi.org/project/klondike/]

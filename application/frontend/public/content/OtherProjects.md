@@ -1,11 +1,3 @@
-## Klondike
-A unified API to read from and write to various data warehouses using lightning fast Polars DataFrames.
-- Tags: Category 1
-- Badges:
-- Buttons:
-  - Source Code [https://github.com/IanRFerguson/klondike]
-  - PyPi Registry [https://pypi.org/project/klondike/]
-
 ## GLM Express
 A standardized, templated way to model first and second-level functional neuroimaging data.
 - Tags: Category 2

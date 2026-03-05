@@ -6,12 +6,13 @@ readme = "README.md"
 requires-python = "~=3.12.0"
 dependencies = [
     "Flask==3.0.0",
-    "gunicorn==20.0.4",
+    "gunicorn==21.2.0",
     "colorlog==6.10.1",
     "google-cloud-logging==3.13.0",
     "resend==2.21.0",
     "requests>=2.31.0",
     "Flask-Caching==2.1.0",
+
 ]
 
 

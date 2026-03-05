@@ -20,7 +20,7 @@
 
 ## Movement Labs 
 - *Software Engineer* | June 2022 - March 2023
-- ![movement_labs](../assets/experience/movement_labs.jpg)
+- ![movement_labs](../assets/experience/ml-2.jpeg)
 - Tags: Engineering
 - Badges:
 - List Items:

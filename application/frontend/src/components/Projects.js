@@ -183,7 +183,7 @@ export default function Projects({ color }) {
       <Modal
         isOpen={!!expandedImage}
         onClose={() => setExpandedImage(null)}
-        size="xl"
+        size="6xl"
         isCentered
       >
         <ModalOverlay />

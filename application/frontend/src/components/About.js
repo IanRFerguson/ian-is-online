@@ -32,9 +32,15 @@ export default function About({ color }) {
             </Stack>
           </Fade>
           <Fade bottom>
-            <Text color={"white.600"} fontSize={"xl"} px={4}>
-              {profile.about}
-            </Text>
+            <Stack spacing={4} px={4}>
+              {(Array.isArray(profile.about) ? profile.about : [profile.about]).map(
+                (paragraph, idx) => (
+                  <Text key={idx} color={"white.600"} fontSize={"xl"}>
+                    {paragraph}
+                  </Text>
+                )
+              )}
+            </Stack>
           </Fade>
         </Stack>
       </Container>

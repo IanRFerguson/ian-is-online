@@ -29,9 +29,18 @@ const parseProfile = (mdContent) => {
           profile.headerRole = lines[++i].substr(2).trim();
           profile.headerDesc = lines[++i].substr(2).trim();
           break;
-        case "About":
-          profile.about = lines[++i].trim();
+        case "About": {
+          const aboutLines = [];
+          let j = i + 1;
+          while (j < lines.length && !lines[j].startsWith("## ")) {
+            const trimmed = lines[j].trim();
+            if (trimmed) aboutLines.push(trimmed);
+            j++;
+          }
+          profile.about = aboutLines;
+          i = j - 1;
           break;
+        }
         case "Contact":
           profile.contact = lines[++i].trim();
           const contactLinks = ["LinkedIn", "GitHub", "Email", "Instagram"];

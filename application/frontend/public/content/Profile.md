@@ -7,7 +7,9 @@
 - Short Description Here.
 
 ## About
-I'm an experienced technical leader with a passion for building expressive systems and dynamic teams. With a background that spans software engineering, cloud infrastructure, data analytics, and social psychology, I bring a unique blend of expertise and strategic leadership to every project.
+I build data systems that scale and teams that stick. 
+
+My approach is rooted at the intersection of social psychology and full-stack data engineering. Whether I’m architecting a multi-tenant migration to GCP or mentoring a cross-functional team, I focus on expressive systems - infrastructure that isn't just functional, but clear, resilient, and built for the humans who use it.
 
 ## Contact
 Write your contact info here

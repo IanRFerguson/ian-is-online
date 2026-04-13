@@ -7,13 +7,6 @@ Using publicly available election data, I built an interactive Choropleth map to
   - Source Code [https://github.com/IanRFerguson/wfp-nyc]
   - See the App [https://wfp-nyc-817201868807.us-central1.run.app]
 
-## NBA Player Analytics
-This is an end-to-end ELT pipeline - player data is extracted from the NBA API, loaded into BigQuery, and transformed using dbt. The resulting models offer player- and team-specific trends, including matchup statistics and gametime conditions (home vs. away, back to backs. etc.)
-- ![nba-dag](../assets/projects/nba-dag.png)
-- Tags: Category 1
-- Badges:
-- Buttons:
-  - Source Code [https://github.com/IanRFerguson/player-analytics]
 
 ## Predicting Whiskey Ratings
 Built off of a single Google Sheet, this project models my preferences in whiskey based on a number of dimensions (style, ABV, flavor notes, etc). The raw input is fed into BigQuery, where dbt transforms and standardizes it before passing it off to Google Dataproc to run Spark MLlib predictive models.
@@ -23,11 +16,20 @@ Built off of a single Google Sheet, this project models my preferences in whiske
 - Buttons:
   - Source Code [https://github.com/IanRFerguson/whiskey-ml]
 
-## Klondike
-Klondike is a unified API to faciliate read and write operations across various data warehouse types using lightning fast Polars DataFrames.
-- ![klondike](../assets/projects/klondike.png)
+
+## Health Metrics
+In an effort to lose a few pounds and keep my exercise consistent, I built an analytics dashboard to track my running mileage, strength training, weight, and diet. Every Sunday, I read the week's data into Python and have Gemini annotate my progress and offer comparisons to earlier weeks; the resulting analysis is formatted in an email and distributed via Resend server.
+- ![health-metrics](../assets/projects/health-metrics.png)
 - Tags: Category 1
 - Badges:
 - Buttons:
-  - Source Code [https://github.com/IanRFerguson/klondike]
-  - PyPi Registry [https://pypi.org/project/klondike/]
+  - Source Code [https://github.com/IanRFerguson/pulse]
+
+
+## Pulse
+Pulse is an Engineering Manager's productivity portal. It syncs data across Github, Asana, and Freshdesk to offer a single pane of Individual Contributor capacity. Data is loaded with dlt, transformed with dbt, and served in a React/TypeScript frontend via Flask API.
+- ![pulse](../assets/projects/pulse.png)
+- Tags: Category 1
+- Badges:
+- Buttons:
+  - Source Code [https://github.com/IanRFerguson/pulse]

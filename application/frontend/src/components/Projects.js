@@ -15,6 +15,11 @@ import {
   Badge,
   Link,
   Center,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  ModalCloseButton,
 } from "@chakra-ui/react";
 import { Fade } from "react-reveal";
 import { useState } from "react";
@@ -28,6 +33,7 @@ export default function Projects({ color }) {
   const options = TagsArray("ProjectsTags");
 
   const [selected, setSelected] = useState("All");
+  const [expandedImage, setExpandedImage] = useState(null);
 
   const handleSelected = (value) => {
     setSelected(value);
@@ -61,7 +67,12 @@ export default function Projects({ color }) {
                   }}
                   overflow="hidden"
                 >
-                  <Image objectFit="cover" src={project.image} />
+                  <Image
+                    objectFit="cover"
+                    src={project.image}
+                    cursor="pointer"
+                    onClick={() => setExpandedImage(project.image)}
+                  />
 
                   <Stack>
                     <CardBody align="left">
@@ -168,6 +179,21 @@ export default function Projects({ color }) {
           </SimpleGrid>
         </Stack>
       </Container>
+
+      <Modal
+        isOpen={!!expandedImage}
+        onClose={() => setExpandedImage(null)}
+        size="xl"
+        isCentered
+      >
+        <ModalOverlay />
+        <ModalContent bg="transparent" boxShadow="none">
+          <ModalCloseButton color="white" />
+          <ModalBody p={0}>
+            <Image src={expandedImage} borderRadius="md" w="100%" />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </>
   );
 }

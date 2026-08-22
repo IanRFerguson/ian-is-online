@@ -7,9 +7,9 @@
 - Short Description Here.
 
 ## About
-I build data systems that scale and teams that stick. 
+I build data systems that scale, and teams that stick together.
 
-My approach is rooted at the intersection of social psychology and full-stack data engineering. Whether I’m architecting a multi-tenant migration to GCP or mentoring a cross-functional team, I focus on expressive systems - infrastructure that isn't just functional, but clear, resilient, and built for the humans who use it.
+I trained in social psychology before I ever wrote a line of production code, and it still shapes how I build. Whether I'm managing a cross-functional team, a project, or a new process I'm building the same thing - something people can trust and stick with.
 
 ## Contact
 Write your contact info here

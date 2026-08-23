@@ -5,15 +5,27 @@
         "location": "Washington, D.C.",
         "positions": [
             {
-                "title": "Associate Engineering Manager",
-                "duration": "March 2024 - Present",
+                "title": "Associate Director of Engineering",
+                "duration": "July 2026 - Present",
                 "summary": [
                     {
                         "sectionValue": [
-                            "Directly manage and mentor a cross-functional team of junior and senior engineers to ship high-impact data products",
-                            "Architect the engineering roadmap, translating long-term quarterly objectives into actionable, bi-weekly sprint execution",
-                            "Spearheaded the technical evaluation and successful adoption of the cooperative’s next-generation data orchestration platform",
-                            "Overhauled data observability and incident reporting pipelines to fortify data integrity and support executive-level strategy"
+                            "Drive data engineering roadmap and team strategy to scale high-reliability architecture, increasing overall pipeline uptime and data pipeline throughput across cooperative systems.",
+                            "Direct cross-functional data initiatives supporting multi-departmental operations, reducing processing overhead and accelerating time-to-insight for member organizations.",
+                            "Oversaw engineering talent development and team growth, boosting sprint velocity and project throughput across core data and infrastructure initiatives."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Associate Engineering Manager",
+                "duration": "March 2023 - July 2026",
+                "summary": [
+                    {
+                        "sectionValue": [
+                            "Architected and deployed production member-facing infrastructure, pioneering automated data cataloging and real-time pipeline observability to maximize data uptime.",
+                            "Championed Agile delivery across multi-disciplinary teams, driving biweekly sprint execution, quarterly OKR setting, vendor strategy, and structured mentorship for junior engineers.",
+                            "Maintain legacy software systems, including AWS Terraform project and several high-traffic web applications (Node, Flask, React)."
                         ]
                     }
                 ]
@@ -24,9 +36,9 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Modernized the engineering stack by integrating dbt and Dockerized development environments into the core workflow",
-                            "Engineered a seamless multi-tenant data warehouse migration from AWS to GCP, deploying a custom data governance system in tandem",
-                            "Refactored dozens of fragmented ETL pipelines into a unified, scalable architecture using abstracted Python operators"
+                            "Spearheaded enterprise warehouse migration from Redshift to BigQuery, refactoring thousands of lines of legacy ETL code into modular, highly reusable pipeline operators.",
+                            "Drove organizational adoption of modern data stack tools, introducing dbt for scalable data modeling and Docker for standardized, containerized developer environments.",
+                            "Contributed core integrations to Parsons, an open-source Python library powering critical data infrastructure across the progressive movement."
                         ]
                     }
                 ]
@@ -44,9 +56,8 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Served as the lead architect for the organization's data infrastructure, encompassing end-to-end ETL pipelines, schema design, and self-service BI tools",
-                            "Built and deployed site reliability tooling to monitor and maintain a fleet of Dockerized microservices on AWS",
-                            "Partnered with cross-functional stakeholders to bridge the gap between complex data requirements and actionable business intelligence"
+                            "Developed and managed all software development operations to accelerate technical work and get productivity tools in the hands of stakeholders across multiple programs.",
+                            "Built out suite of custom monitoring and efficiency automations including automated Google Sheets reports of SMS campaign results and site reliability alerts delivered via Slack webhooks."
                         ]
                     }
                 ]
@@ -64,30 +75,8 @@
                 "summary": [
                     {
                         "sectionValue": [
-                            "Developed and launched GLM Express, a configurable Python framework for modeling functional neuroimaging data",
-                            "Orchestrated all operational logistics, including budget oversight, personnel onboarding, and department scheduling",
-                            "Built a custom Flask interface to automate administrative workflows and streamline human subjects recruitment",
-                            "Conducted independent research utilizing unsupervised machine learning to analyze the nexus between regional demographics and online hate speech"
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "company": "Social Cognitive and Neural Sciences Lab",
-        "image": "../assets/experience/nyu.jpg",
-        "location": "New York, New York",
-        "positions": [
-            {
-                "title": "Graduate Research Assistant",
-                "duration": "December 2018 - June 2020",
-                "summary": [
-                    {
-                        "sectionValue": [
-                            "Engineered a stimulus generation engine for ensemble encoding tasks, improving the precision of experimental presentations",
-                            "Developed an automated participant management system to optimize recruitment and reduce scheduling overhead",
-                            "Led research exploring the psychological drivers of political shifts in response to shifting national demographics"
+                            "Managed day-to-day operations in the lab, including hiring and financial functions.",
+                            "Principal in-house engineer tasked with developing software systems to enable scalable research programs, as well as daily tasks in the lab."
                         ]
                     }
                 ]

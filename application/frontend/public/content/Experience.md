@@ -1,11 +1,21 @@
 ## The Movement Cooperative
-- *Associate Engineering Manager* | March 2023 - Present
+- *Associate Director of Engineering* | July 2026 - Present
 - ![tmc](../assets/experience/tmc-2.jpg)
 - Tags: Engineering
 - Badges:
 - List Items:
-  - Design and implement member-facing infrastructure, including automated data catalog and pipeline monitoring reports.
-  - Manage day-to-day operations of the engineering team including biweekly sprints, quarterly OKR planning, vendor communications, and development of early-career team members.
+  - Drive data engineering roadmap and team strategy to scale high-reliability architecture, increasing overall pipeline uptime and data pipeline throughput across cooperative systems.
+  - Direct cross-functional data initiatives supporting multi-departmental operations, reducing processing overhead and accelerating time-to-insight for member organizations.
+  - Oversaw engineering talent development and team growth, boosting sprint velocity and project throughput across core data and infrastructure initiatives.
+
+## The Movement Cooperative
+- *Associate Engineering Manager* | March 2023 - July 2026
+- ![tmc](../assets/experience/tmc-2.jpg)
+- Tags: Engineering
+- Badges:
+- List Items:
+  - Architected and deployed production member-facing infrastructure, pioneering automated data cataloging and real-time pipeline observability to maximize data uptime.
+  - Championed Agile delivery across multi-disciplinary teams, driving biweekly sprint execution, quarterly OKR setting, vendor strategy, and structured mentorship for junior engineers.
   - Maintain legacy software systems, including AWS Terraform project and several high-traffic web applications (Node, Flask, React).
 
 ## The Movement Cooperative 
@@ -14,9 +24,9 @@
 - Tags: Engineering
 - Badges:
 - List Items:
-  - Led warehouse migration from Redshift to BigQuery, refactoring thousands of line of bespoke ETL code into reusable operators in the process.
-  - Thought leader in organization's adoption of modern software tools - e.g., dbt for pattern-based data models, Docker for containerized development.
-  - Contributer to Parsons, a Python library of integrations for the progressive community.
+  - Spearheaded enterprise warehouse migration from Redshift to BigQuery, refactoring thousands of lines of legacy ETL code into modular, highly reusable pipeline operators.
+  - Drove organizational adoption of modern data stack tools, introducing dbt for scalable data modeling and Docker for standardized, containerized developer environments.
+  - Contributed core integrations to Parsons, an open-source Python library powering critical data infrastructure across the progressive movement.
 
 ## Movement Labs 
 - *Software Engineer* | June 2022 - March 2023

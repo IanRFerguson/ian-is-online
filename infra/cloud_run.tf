@@ -41,6 +41,10 @@ resource "google_cloud_run_v2_service" "cloud_run_service" {
         name  = "CONTACT_EMAIL"
         value = var.contact_email
       }
+      env {
+        name  = "TURNSTILE_SECRET_KEY"
+        value = var.turnstile_secret_key
+      }
     }
   }
 }

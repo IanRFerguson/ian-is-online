@@ -22,6 +22,14 @@
   width: 100%;
 }
 
+.contactMeHoneypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contactMeContent {
   width: 100%;
   display: flex;

@@ -1,3 +1,4 @@
+import html
 import os
 import xml.etree.ElementTree as ET
 from datetime import datetime
@@ -9,6 +10,8 @@ from flask import Blueprint, Response, jsonify, request
 from utilities import application_logger
 
 #####
+
+TURNSTILE_VERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify"
 
 api_bp = Blueprint("api", __name__, url_prefix="/api")
 
@@ -42,6 +45,45 @@ def fetch_key() -> Tuple[Response, int]:
     return jsonify({"api": api_key}), 200
 
 
+def verify_turnstile(token: str, remote_ip: str) -> bool:
+    """
+    Verifies a Cloudflare Turnstile token server-side.
+
+    Returns:
+        bool: True if Cloudflare confirms the token is valid, False otherwise.
+    """
+
+    secret_key = os.environ.get("TURNSTILE_SECRET_KEY")
+
+    if not secret_key:
+        application_logger.error("TURNSTILE_SECRET_KEY not set in environment variables.")
+        return False
+
+    if not token:
+        return False
+
+    try:
+        r = requests.post(
+            TURNSTILE_VERIFY_URL,
+            data={"secret": secret_key, "response": token, "remoteip": remote_ip},
+            timeout=10,
+        )
+        r.raise_for_status()
+        result = r.json()
+
+    except Exception as e:
+        application_logger.error(f"Error verifying Turnstile token: {e}")
+        return False
+
+    if not result.get("success"):
+        application_logger.warning(
+            f"Turnstile verification failed: {result.get('error-codes')}"
+        )
+        return False
+
+    return True
+
+
 @api_bp.route("/send", methods=["POST"])
 def send_email() -> Tuple[Response, int]:
     """
@@ -55,12 +97,22 @@ def send_email() -> Tuple[Response, int]:
     application_logger.info("Received send_email request...")
 
     # Get JSON data from the request
-    resp = request.get_json()
+    resp = request.get_json(silent=True) or {}
 
-    # Extract necessary fields
-    name = resp.get("name")
-    email = resp.get("email")
-    message = resp.get("message")
+    # Honeypot field is hidden from real visitors; pretend success so bots move on
+    if resp.get("website"):
+        application_logger.warning("Honeypot field filled in, dropping submission")
+        return jsonify({"message": "Email sent successfully"}), 200
+
+    # Cloud Run sits behind a proxy, so the client IP is the first X-Forwarded-For entry
+    remote_ip = request.headers.get("X-Forwarded-For", request.remote_addr or "")
+    if not verify_turnstile(resp.get("turnstileToken"), remote_ip.split(",")[0].strip()):
+        return jsonify({"error": "Verification failed"}), 400
+
+    # Extract necessary fields, escaping them so submissions can't inject HTML
+    name = html.escape(resp.get("name") or "")
+    email = html.escape(resp.get("email") or "")
+    message = html.escape(resp.get("message") or "")
 
     params = {
         "from": "Contact Form <hello@ianferguson.dev>",  # Use your authenticated domain

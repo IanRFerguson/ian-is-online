@@ -19,3 +19,9 @@ variable "contact_email" {
   description = "The contact email address for the application"
   type        = string
 }
+
+variable "turnstile_secret_key" {
+  description = "The secret key for Cloudflare Turnstile verification"
+  type        = string
+  sensitive   = true
+}
